@@ -1,10 +1,10 @@
-# Privacy Policy for JLPT N3 Words
+# Privacy Policy for JLPT N3 Word200
 
 **Last Updated: 2025-09-11**
 
 ## Introduction
 
-This Privacy Policy describes how JLPT N3 Words ("we," "our," or "us") collects, uses, and shares information when you use our mobile application (the "App"). By using our App, you agree to the collection and use of information in accordance with this policy.
+This Privacy Policy describes how JLPT N3 Word200 ("we," "our," or "us") collects, uses, and shares information when you use our mobile application (the "App"). By using our App, you agree to the collection and use of information in accordance with this policy.
 
 ## Information We Collect
 
@@ -132,7 +132,7 @@ Your continued use of the App after any modifications constitutes acceptance of 
 If you have any questions about this Privacy Policy or our data practices, please contact us at:
 
 **Email**: hello.prseo7@gmail.com
-**App**: JLPT N3 Words
+**App**: JLPT N3 Word200
 **Developer**: PrSeo7
 
 ## Compliance
