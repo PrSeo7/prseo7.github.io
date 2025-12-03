@@ -1,24 +1,20 @@
-# Privacy Policy for Baby Japanese
+# Privacy Policy for Neko Japanese
 
 **Last Updated: November 16, 2025**
 
 ## Overview
 
-Baby Japanese ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect information when you use our mobile application.
+Neko Japanese ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect information when you use our mobile application.
 
 ## Information We Collect
 
 ### Analytics Data
-We use Firebase Analytics and Google AdMob to collect anonymous usage data, including:
+We use Firebase Analytics to collect anonymous usage data, including:
 - App usage statistics (features used, session duration)
 - Device information (device type, OS version, language settings)
 - Crash reports and performance data
 
-### Advertising Data
-We display advertisements through Google AdMob, which may collect:
-- Advertising identifiers (IDFA on iOS)
-- Device information for ad personalization
-- Ad interaction data
+**Important**: All data collected is anonymous and NOT linked to your identity.
 
 ## Information We DO NOT Collect
 
@@ -34,8 +30,9 @@ We display advertisements through Google AdMob, which may collect:
 Information collected is used solely for:
 - Improving app functionality and user experience
 - Analyzing app performance and fixing crashes
-- Displaying relevant advertisements
 - Understanding usage patterns to enhance features
+
+All data is anonymous and cannot be used to identify individual users.
 
 ## Third-Party Services
 
@@ -46,18 +43,20 @@ Our app uses the following third-party services:
 - **Data Collected**: Anonymous usage data, crash logs, device information
 - **Privacy Policy**: [https://firebase.google.com/support/privacy](https://firebase.google.com/support/privacy)
 
-### Google AdMob
-- **Purpose**: Displaying advertisements
-- **Data Collected**: Advertising identifiers, device information
-- **Privacy Policy**: [https://policies.google.com/privacy](https://policies.google.com/privacy)
 
-## Children's Privacy
+## Age Requirements and Privacy
 
-Baby Japanese is designed for children and families. We are committed to complying with the Children's Online Privacy Protection Act (COPPA):
-- We do NOT knowingly collect personal information from children under 13
+Neko Japanese is designed for Japanese language learners of all ages and skill levels.
+
+**Age Requirements:**
+- This app is intended for users aged 13 and older
+- Users under 13 should not use this app
+- We do NOT knowingly collect personal information from anyone under 13
+
+**Privacy Protections:**
 - We do NOT require account creation or personal information
-- All advertising is family-friendly and age-appropriate
-- Parents can control ad personalization through device settings
+- We do NOT collect any data that can identify individual users
+- All analytics data is anonymous and aggregated
 
 ## Data Security
 
@@ -69,17 +68,10 @@ We implement appropriate security measures to protect information:
 
 ## Your Rights and Choices
 
-You have the following rights:
-
-### Limit Ad Tracking
-- **iOS**: Settings → Privacy & Security → Tracking → Disable "Allow Apps to Request to Track"
-- **iOS Ad Personalization**: Settings → Privacy & Security → Apple Advertising → Disable "Personalized Ads"
-
-### Reset Advertising ID
-- **iOS**: Settings → Privacy & Security → Apple Advertising → Reset Advertising Identifier
-
-### Opt Out of Analytics
-Analytics data is anonymous and cannot be opted out individually, but you can delete the app to stop data collection.
+### Data Collection
+- All data collected is anonymous and not linked to your identity
+- Analytics data cannot be opted out individually as it is fully anonymous
+- You can delete the app at any time to stop all data collection
 
 ## Data Retention
 
@@ -104,12 +96,12 @@ We may update this Privacy Policy from time to time. We will notify users of sig
 If you have questions about this Privacy Policy or our privacy practices, please contact us at:
 
 **Email**: hello.prseo7@gmail.com
-**App**: Baby Japanese
+**App**: Neko Japanese
 **Developer**: PrSeo7
 
 ## Consent
 
-By using Baby Japanese, you consent to this Privacy Policy and agree to its terms.
+By using Neko Japanese, you consent to this Privacy Policy and agree to its terms.
 
 ---
 
@@ -121,24 +113,19 @@ When filling out the App Privacy section in App Store Connect, select:
 
 **Data Types Collected:**
 
-1. **Identifiers**
-   - Device ID ✓
-   - Advertising Data ✓
-   - Usage Data: Tracking purposes, Analytics
-
-2. **Usage Data**
+1. **Usage Data**
    - Product Interaction ✓
    - Crash Data ✓
    - Performance Data ✓
    - Usage: Analytics, App Functionality
 
-3. **Diagnostics**
+2. **Diagnostics**
    - Crash Data ✓
    - Performance Data ✓
    - Usage: App Functionality
 
 **Is this data linked to the user's identity?** No
 
-**Is this data used to track the user?** Yes (for advertising)
+**Is this data used to track the user?** No
 
 ---
