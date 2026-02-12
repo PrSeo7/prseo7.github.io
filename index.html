@@ -987,19 +987,6 @@
         }
       }
 
-      // Register service worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/sw.js')
-            .then(function (registration) {
-              console.log('SW registered');
-            })
-            .catch(function (err) {
-              console.log('SW registration failed');
-            });
-        });
-      }
-
       // Font loading detection
       if ('fonts' in document) {
         document.fonts.ready.then(function () {
