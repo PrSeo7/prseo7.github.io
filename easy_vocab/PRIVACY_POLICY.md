@@ -6,7 +6,9 @@
 
 EasyVocab ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application EasyVocab (수능 영단어) (the "App").
 
-Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.
+Please read this privacy policy carefully. It describes what happens when you use the App; it is not a request for consent (see "About This Policy" below). If you do not want the data collection described here, you can buy Premium (which ends all advertising data collection) or uninstall the App (which ends all collection).
+
+PrSeo7 (the developer, contact details under "Contact Us") is the data controller for the processing described in this policy, except where this policy says that Apple, Google Play or Google acts independently.
 
 ## Information We Collect
 
@@ -15,7 +17,7 @@ Please read this privacy policy carefully. If you do not agree with the terms of
 When you use the App, we automatically collect certain information about your device and usage patterns:
 
 #### Analytics Data (via Firebase Analytics)
-- Device information (model, operating system version, an app-scoped Firebase installation identifier)
+- Device information (model, operating system version) and installation identifiers: a Firebase installation identifier that Google assigns to this installation of the App (it changes when you reinstall), and on iOS also Apple's identifier for vendors (IDFV), which is the same for all PrSeo7 apps on your device and resets when the last of them is removed
 - App usage data (screens viewed, features used, session duration)
 - Language preferences
 - Premium status (whether the one-time premium purchase has been made)
@@ -77,9 +79,23 @@ We use the information we collect to:
    - Unlock premium after the one-time purchase
    - Restore a previous purchase on a new device or after reinstalling
 
+## Legal Bases for Processing (EEA, UK and Switzerland)
+
+Where the GDPR, the UK GDPR or the Swiss Federal Act on Data Protection applies, we rely on the following legal bases:
+
+| Processing | Legal basis | Notes |
+|---|---|---|
+| Learning progress and settings stored on your device | None needed — this data never leaves your device, so we do not process it | Fully under your control (export, import, uninstall) |
+| Usage analytics (Firebase Analytics) and crash reporting (Firebase Crashlytics) | Legitimate interests (GDPR Art. 6(1)(f)): understanding how the App is used and keeping it stable | Balanced by the safeguards described in this policy: no user accounts, no advertising identifier in Analytics, masked IP addresses, automatic deletion after at most 14 months (Analytics) / 90 days (Crashlytics), and uninstalling ends collection |
+| Personalized advertising (free version) | Consent (GDPR Art. 6(1)(a)), collected through the Google consent form before the first ad and withdrawable at any time via Settings > Privacy > "Ad Privacy Settings" | Where you decline, ads are non-personalized |
+| Showing advertisements in the free version and measuring their delivery | Legitimate interests (GDPR Art. 6(1)(f)): funding the free version of the App | You can remove all advertising by purchasing Premium |
+| Processing the one-time Premium purchase and restoring it | Performance of a contract (GDPR Art. 6(1)(b)) | The payment itself is processed by Apple or Google as independent controllers |
+
+We do not make any decision about you based solely on automated processing that produces legal effects concerning you or similarly significantly affects you. Providing the data described in this policy is not a statutory or contractual requirement; the only consequence of not providing it is that you cannot use the App (or, for advertising data, that you use Premium instead of the free version).
+
 ## Third-Party Services
 
-We use the following third-party services that may collect information:
+We use the following third-party services that may collect information. These are the only third parties that receive data from the App; we share user data with nobody else. Each of them is bound to protect your data to a standard at least equivalent to this policy: Google under its Privacy Policy, its Ads Data Processing Terms and its EU/UK data protection terms (https://business.safety.google/adsprocessorterms/), and Apple and Google Play under their own privacy policies and developer agreements.
 
 ### Google AdMob (including Google User Messaging Platform)
 - **Purpose:** Display advertisements in the free version of the app and manage advertising consent
@@ -134,7 +150,7 @@ We implement appropriate technical and organizational security measures to prote
 - **Learning Progress:** Stored locally on your device until you delete the app
 - **Analytics Data:** Retained by Firebase according to its data retention settings (at most 14 months), then deleted automatically
 - **Crash Reports:** Retained by Firebase Crashlytics for 90 days, then deleted automatically
-- **Ad Data:** Retained by Google AdMob according to Google's policies
+- **Ad Data:** Held by Google under its advertising data retention rules (https://policies.google.com/technologies/retention): Google anonymizes advertising server logs by removing part of the IP address after 9 months and identifier information after 18 months. Data tied to your advertising ID can be reset or deleted earlier by resetting or deleting the advertising ID in your device settings
 
 **Important limitation:** analytics, crash and advertising data is transmitted directly from your device to Google (Firebase, AdMob) and held on Google's systems. The App has no user accounts and we hold no name, e-mail or other identifier that would let us find the records belonging to a particular person. **We are therefore not able to locate or delete individual analytics or crash records on request.** This data is not linked to your identity, and it expires automatically under the retention periods above. Uninstalling the App stops all further collection immediately.
 
@@ -173,16 +189,20 @@ If you are in the European Economic Area, the United Kingdom, or Switzerland, yo
 
 **How these rights apply to this App:** we process no data that we can attribute to you (no account, no contact details). For the analytics and crash data described above we are unable to identify the data subject, so access, rectification, erasure and portability requests cannot be fulfilled for that data (GDPR Article 11). You can still: withdraw ad consent at any time via Settings > Privacy > "Ad Privacy Settings"; object to further processing by uninstalling the App, which ends all collection; and exercise your rights against Google for advertising data through Google's privacy controls (https://myadcenter.google.com, https://myaccount.google.com). Learning data stays on your device and is fully under your control (export, import, delete by uninstalling).
 
+**Right to lodge a complaint:** you also have the right to lodge a complaint with a data protection supervisory authority, in particular in the EU member state of your habitual residence, place of work or place of the alleged infringement (list of authorities: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en), with the Information Commissioner's Office (ICO) in the United Kingdom (https://ico.org.uk), or with the Federal Data Protection and Information Commissioner (FDPIC) in Switzerland (https://www.edoeb.admin.ch). We would appreciate the chance to address your concern first — see "Contact Us".
+
 ### CCPA/CPRA Rights (California Users)
 If you are a California resident, you have the right to:
 - Know what personal information is collected
 - Know whether personal information is sold or shared
 - Opt-out of the sale or sharing of personal information
 - Access your personal information
+- Correct inaccurate personal information
 - Request deletion of personal information
+- Limit the use of sensitive personal information (the App collects no sensitive personal information)
 - Non-discrimination for exercising your rights
 
-**Note:** We do not sell your personal information. To the extent that providing the advertising identifier to our advertising partner (Google AdMob) for personalized ads is considered "sharing" for cross-context behavioral advertising, you can opt out at any time: deny the iOS tracking prompt or turn off tracking in iOS Settings, reset or delete your advertising ID in Android Settings, use the in-app "Ad Privacy Settings" where it is shown, or purchase Premium, which removes ads and all AdMob data collection. Access and deletion requests are subject to the same limitation described under "Data Retention": we hold no identifier that would let us find your records, so we can confirm what categories are collected but cannot produce or delete a per-person record.
+You can exercise these rights by e-mail (see "Contact Us"). **Note:** We do not sell your personal information. To the extent that providing the advertising identifier to our advertising partner (Google AdMob) for personalized ads is considered "sharing" for cross-context behavioral advertising, you can opt out at any time: deny the iOS tracking prompt or turn off tracking in iOS Settings, reset or delete your advertising ID in Android Settings, use the in-app "Ad Privacy Settings" where it is shown, or purchase Premium, which removes ads and all AdMob data collection. Access and deletion requests are subject to the same limitation described under "Data Retention": we hold no identifier that would let us find your records, so we can confirm what categories are collected but cannot produce or delete a per-person record.
 
 ## Children's Privacy
 
@@ -199,9 +219,9 @@ Premium is a **one-time, non-consumable in-app purchase** — there is no subscr
 
 ## International Data Transfers
 
-Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country.
+The analytics, crash and advertising data described in this policy is transmitted directly from your device to Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA) and processed on Google's systems, which may be located in the United States or other countries whose data protection laws differ from those of your country. No data is transferred to us at all, because we operate no server and receive no copy of this data.
 
-We ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy.
+For users in the EEA, the UK and Switzerland, Google relies on the EU-U.S. Data Privacy Framework (and its UK and Swiss extensions) and on the European Commission's Standard Contractual Clauses for these transfers; see https://policies.google.com/privacy/frameworks and https://business.safety.google/adsprocessorterms/. Apple and Google Play process purchase data under their own privacy policies and transfer mechanisms.
 
 ## Changes to This Privacy Policy
 
@@ -217,28 +237,27 @@ If you have questions or concerns about this Privacy Policy or our data practice
 
 **Email:** hello.prseo7@gmail.com
 **App:** EasyVocab (수능 영단어)
-**Developer:** PrSeo7
+**Developer and data controller:** PrSeo7 (independent developer)
 
-## Consent
+## About This Policy
 
-By using our App, you consent to our Privacy Policy and agree to its terms.
+This policy describes what happens when you use the App; it is not a request for consent, and using the App is not treated as consent. Where the law requires your consent — personalized advertising in the EEA, the UK and Switzerland, and tracking on iOS — the App asks you separately, through the Google consent form and the iOS App Tracking Transparency prompt, and you can withdraw that consent at any time as described under "Your Ad Consent Choices". All other processing rests on the legal bases listed under "Legal Bases for Processing". If you do not want the data collection described here, you can buy Premium (no advertising data) or uninstall the App (no collection at all).
 
 ## Data Collection Summary for App Store/Play Store
 
+**About "linked to you" and "tracking":** in Apple's privacy label, "linked" means the data is tied to a device-level identifier (for analytics data, the Firebase Analytics app-instance ID assigned to your installation and, on iOS, Apple's identifier for vendors; for AdMob data, the advertising ID); it does not mean that we can identify you as a person — we cannot, as explained under "Data Retention". "Tracking" is narrower: it means combining data from this App with data from other companies' apps or websites for targeted advertising. Only the advertising ID is used that way, and only in the free version with your permission. Google's own privacy declarations for the AdMob and Firebase SDKs use the same split, and this summary follows them.
+
 ### Data Used to Track You (free version, only with tracking permission)
-- **Identifiers:** Advertising ID (for personalized ads)
-- **Usage Data:** Advertising data
-- **Location:** Coarse location inferred from IP address by Google AdMob
+- **Identifiers:** Advertising ID (for personalized ads) — the only data type used for tracking; it also appears under "Data Linked to You" below
 
 ### Data Linked to You
-- **Usage Data:** App interactions, word progress (stored locally)
-- **Identifiers:** Device ID (for analytics)
+- **Usage Data:** App interactions (screen views, learning actions such as marking a word as learned); in the free version also advertising data (ads shown and tapped)
+- **Identifiers:** Device ID (Firebase installation identifier for analytics; on iOS also the identifier for vendors); in the free version also the advertising ID
+- **Location:** Coarse location inferred from the IP address, never from location services — country/region by Firebase Analytics (all users) and city-level by Google AdMob for ad delivery (free version only). Neither is used for tracking; the App requests no location permission
 - **Purchases:** In-app purchase history
 
 ### Data Not Linked to You
 - **Diagnostics:** Crash logs, performance data
-- **Usage Data:** Anonymous analytics
-- **Location:** Coarse (country/region) location derived by Firebase Analytics from a masked IP address — all users, not used for tracking
 
 ## Specific Feature Data Collection
 
@@ -248,7 +267,7 @@ By using our App, you consent to our Privacy Policy and agree to its terms.
 - **Opt-out:** Purchase premium, use the in-app "Ad Privacy Settings" (EEA/UK/CH), deny the iOS tracking prompt, or use device ad settings
 
 ### Firebase Analytics
-- **Collects:** App usage events, screen views, user actions, keyed by an app-scoped Firebase installation ID (not your advertising ID); approximate country/region location derived from a masked IP address (all users)
+- **Collects:** App usage events, screen views, user actions, keyed by a Firebase installation ID assigned to this installation and, on iOS, Apple's identifier for vendors (IDFV) — not your advertising ID; approximate country/region location derived from a masked IP address (all users)
 - **Purpose:** Improve app performance and user experience
 - **Opt-out:** Usage analytics cannot be switched off inside the App, but it contains no advertising identifier and the advertising-related consent types are denied by default. Uninstalling the App stops all collection; records already received cannot be deleted individually by us and expire automatically (see "Data Retention")
 
@@ -278,7 +297,7 @@ By using our App, you consent to our Privacy Policy and agree to its terms.
 
 ## Change History
 
-- **September 4, 2026:** Added the in-app GDPR consent form (Google UMP) and the Settings > Privacy > "Ad Privacy Settings" entry; described the iOS App Tracking Transparency prompt and its timing (first ad screen, not launch); stated that Firebase Analytics does not collect the advertising ID and starts with ad consent denied; clarified that "location" means Google's IP-based approximate location inference and that the App requests no location permission; described backup files; added SKAdNetwork. Same day: corrected the deletion and access wording — analytics and crash data goes straight to Google, is not linked to any identity and cannot be located or deleted by us individually; it expires automatically. Earlier versions implied we could delete it on request. Also corrected: approximate (country/region) location is derived from the IP address not only by AdMob for free users but also by Firebase Analytics for **all** users; an earlier wording implied only the free version involved location. Also corrected: premium is a one-time, non-consumable purchase, not a subscription — earlier wording said "premium subscription". Re-merged the sections that the published July 26, 2026 revision already had and this rewrite had dropped: "Notifications and Reminders" (plus the Notifications feature entry), "CCPA/CPRA Rights" with the sharing opt-out, the EEA/UK/Switzerland scope of the GDPR section, and UMP described as a TCF-integrated consent platform
+- **September 4, 2026:** Added the in-app GDPR consent form (Google UMP) and the Settings > Privacy > "Ad Privacy Settings" entry; described the iOS App Tracking Transparency prompt and its timing (first ad screen, not launch); stated that Firebase Analytics does not collect the advertising ID and starts with ad consent denied; clarified that "location" means Google's IP-based approximate location inference and that the App requests no location permission; described backup files; added SKAdNetwork. Same day: corrected the deletion and access wording — analytics and crash data goes straight to Google, is not linked to any identity and cannot be located or deleted by us individually; it expires automatically. Earlier versions implied we could delete it on request. Also corrected: approximate (country/region) location is derived from the IP address not only by AdMob for free users but also by Firebase Analytics for **all** users; an earlier wording implied only the free version involved location. Also corrected: premium is a one-time, non-consumable purchase, not a subscription — earlier wording said "premium subscription". Re-merged the sections that the published July 26, 2026 revision already had and this rewrite had dropped: "Notifications and Reminders" (plus the Notifications feature entry), "CCPA/CPRA Rights" with the sharing opt-out, the EEA/UK/Switzerland scope of the GDPR section, and UMP described as a TCF-integrated consent platform. Also made the store-label summary consistent: every Firebase Analytics data type (device ID, usage data, IP-derived country/region location) is declared "linked to you" — Apple's "linked" means tied to a device-level identifier, not that we can identify a person — replacing the earlier split that listed the same Analytics stream as both "linked" (device ID) and "not linked" (anonymous analytics, location). Also aligned the "tracking" column with Google's own SDK privacy declarations: only the advertising ID is used for tracking; AdMob's IP-inferred location and advertising data moved from "Data Used to Track You" to "Data Linked to You", and the two IP-based location entries (Analytics, AdMob) were merged into one so the summary no longer reads as if one location item were tracked and another not. GDPR Article 13 completeness pass: added "Legal Bases for Processing" (per-purpose legal basis, statement on automated decision-making, consequence of not providing data), the right to lodge a complaint with a supervisory authority (EDPB list, ICO, FDPIC), the controller identity, and a concrete "International Data Transfers" section naming Google LLC, the EU-U.S. Data Privacy Framework and Standard Contractual Clauses (and stating that no data reaches us at all). Replaced the "Consent — by using our App you consent" clause with "About This Policy": use of the App is not treated as consent; consent is collected separately where required (UMP form, iOS ATT), everything else rests on the stated legal bases. Completeness follow-up: advertising data retention now cites Google's concrete retention rules (9 / 18 months) instead of "Google's policies"; the third-party section states that Google, Apple and Google Play are the only recipients and are bound to equivalent protection (App Store guideline 5.1.1); the CCPA list gained the CPRA rights to correct and to limit use of sensitive personal information (none is collected) and names e-mail as the request channel. Corrected the analytics identifier description: it was called "app-scoped", but on iOS the Analytics SDK also collects Apple's identifier for vendors (IDFV), which is shared by all PrSeo7 apps on one device; the policy now names both identifiers
 - **July 26, 2026:** Published revision: advertising consent (UMP/ATT), reminders, one-time premium purchase
 - **December 30, 2024:** First version
 
