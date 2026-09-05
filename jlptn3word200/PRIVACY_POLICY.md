@@ -1,165 +1,116 @@
 # Privacy Policy for JLPT Vocab Master
 
-**Last Updated: 2026-07-26**
+**Last Updated:** September 5, 2026
 
-## Introduction
+JLPT Vocab Master (shown on your device as "JLPT Vocab") is a Japanese vocabulary flashcard app made by PrSeo7, an independent developer. This page explains what data the App handles, why, and what you can do about it. PrSeo7 is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
-This Privacy Policy describes how JLPT Vocab Master ("we," "our," or "us") collects, uses, and shares information when you use our mobile application (the "App"). By using our App, you agree to the collection and use of information in accordance with this policy.
+## The short version
 
-## Information We Collect
+- The App has **no user accounts**. It never asks for your name, e-mail address or any other personal detail.
+- Your learning progress and settings stay **on your device**. We run no server and receive no copy of them.
+- The App uses Google's Firebase for usage analytics and crash reports, and Google AdMob for ads in the **free version only**. That data goes from your device straight to Google.
+- Because we hold no identifier for you, **we cannot look up or delete an individual's analytics or crash records**. They expire automatically, and uninstalling the App stops all collection.
+- Buying Premium (a one-time purchase, no subscription) removes ads and all advertising data collection.
 
-### 1. Personal Information
-We do not collect personally identifiable information such as your name, email address, or phone number. The App works without an account and has no sign-up.
+## What the App collects
 
-### 2. Learning and Settings Data (stored only on your device)
-- **Learning progress**: The words you have marked as familiar, your review history, and streak data, stored in a local database on your device
-- **App settings**: Your interface language (English, Korean, or Simplified Chinese), theme, and daily reminder preferences, stored locally on your device
+**Usage analytics (Firebase Analytics, all users)**
+- Device model and operating system version
+- A Firebase installation identifier that Google assigns to this installation (it changes if you reinstall); on iOS also Apple's identifier for vendors (IDFV), which is shared by all PrSeo7 apps on your device
+- App opens and session length (Firebase's standard events), and Premium purchase or restore events: which product, whether it succeeded, and for a completed purchase its price and currency. The App sends no record of which words you study or how you answer
+- Approximate location at country/region level, which Google derives from a masked IP address. This applies to all users, including Premium. The App requests no location permission and never uses your device's location services
+- Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you allow tracking in the system prompt
 
-This data never leaves your device unless you explicitly use the backup export feature (see "Backup and Restore" below).
+**Crash reports (Firebase Crashlytics, all users)**
+- Crash logs and stack traces, the device state at the time of the crash, and an installation identifier used to count affected devices. When an ad fails to load, the ad slot's identifier and size are attached to the report
 
-### 3. Analytics Data
-We use Firebase Analytics to collect anonymous usage statistics, including:
-- App usage patterns and frequency
-- Feature usage (which screens you visit)
-- Session duration
-- Device information (device type, operating system version)
-- App performance data
+**Advertising (Google AdMob, free version only)**
+- The device advertising ID (on iOS only if you allow tracking; on Android according to your device's ad settings), your IP address (Google may estimate a city-level location from it), device information, and which ads were shown or tapped
+- Advertising data is collected only while ads are shown, never for Premium users, and starting from the first screen that shows an ad, not at launch
+- On iOS, ad-driven installs may be attributed through Apple's SKAdNetwork, which does not identify you. On Android 13 and later, Google's ads software may use Android's Privacy Sandbox advertising features (ad topics and attribution), which are controlled in your device's Privacy settings
 
-### 4. Advertising Data
-The free version of the App displays advertisements through Google AdMob, with Meta Audience Network as an additional ad network (mediation). These services may collect:
-- Advertising identifiers (such as the Android Advertising ID or, with your permission, the iOS IDFA)
-- Device information for ad delivery and, where permitted, ad targeting
-- Ad interaction data (impressions, clicks)
+**Fonts**
+- When the App's language is Korean or Simplified Chinese, it downloads the matching display font from Google Fonts the first time it is needed, so your IP address reaches Google's font servers. The Japanese font is bundled with the App
 
-See "Advertising and Your Choices" below for the consent and opt-out options available to you. If you purchase Premium, ads are removed and no advertising SDK is initialized.
+**On your device only**
+- Words you mark as familiar, your review schedule and results, streaks, starred words, and your language, theme, reminder and haptics settings. This data is stored in the App's own storage on your device; it is included in your device's normal system backups (iCloud or Google backup) if you have those turned on. Under Settings > Backup & Restore, "Export" writes it to a file that you choose where to send and "Import" reads such a file back. Backups contain only learning progress, no identifiers
 
-### 5. Crash Data
-We use Firebase Crashlytics to collect crash reports and error logs to improve app stability. This includes:
-- Crash logs and stack traces
-- Device information
-- App version information
+**Purchases**
+- The Premium purchase is processed by Apple or Google Play. We never see your payment details; the App only learns whether Premium is owned
 
-### 6. Purchase Data
-The App offers an optional one-time Premium purchase. Payment is processed entirely by the Apple App Store or Google Play; we never receive or store your payment details. The App only stores your Premium status locally on your device, and the stores' billing services are used to verify and restore purchases.
+**Reminders**
+- If you turn on the "Study Reminder", the App schedules one local notification per day on your device at the time you choose. There is no push server and nothing is sent anywhere. Notification permission is requested only when you turn reminders on
 
-## How We Use Your Information
+## Why, and on what legal basis
 
-### Learning and Settings Data
-- **Purpose**: To track your learning progress and provide personalized learning experiences
-- **Storage**: Stored locally on your device
-- **Retention**: Data persists until you uninstall the app or clear app data
+| What | Why | Legal basis (EEA, UK, Switzerland) |
+|---|---|---|
+| Learning data on your device | Provide the App | Not processed by us |
+| Analytics and crash reports | Understand usage, fix crashes | Legitimate interests (GDPR Art. 6(1)(f)) |
+| Personalized ads (free version) | Fund the free version | Your consent (Art. 6(1)(a)), given in the consent form |
+| Ads in general (free version) | Fund the free version | Legitimate interests (Art. 6(1)(f)) |
+| Premium purchase | Unlock Premium, restore it later | Contract (Art. 6(1)(b)) |
 
-### Analytics Data
-- **Purpose**: To understand how users interact with our app and improve user experience
-- **Processing**: Anonymous and aggregated data analysis
-- **Retention**: As per Firebase Analytics retention policies
+We make no decisions about you based solely on automated processing that have legal or similarly significant effects. Nothing here is required by law or contract; if you do not want this processing, use Premium (no advertising data) or uninstall the App (no collection at all).
 
-### Advertising Data
-- **Purpose**: To display advertisements that support free access to the App
-- **Processing**: Used by Google AdMob and its mediation partner Meta Audience Network for ad delivery, measurement, and — only where you have consented or permitted it — ad personalization
-- **Retention**: As per the respective ad networks' policies
+## Who receives data
 
-### Crash Data
-- **Purpose**: To identify and fix bugs, improve app stability
-- **Processing**: Error analysis and debugging
-- **Retention**: As per Firebase Crashlytics retention policies
+Only these companies receive data from the App, each bound to protect it at least as well as this policy says:
+- **Google LLC** (Firebase Analytics, Firebase Crashlytics, AdMob, Google Fonts): https://policies.google.com/privacy and https://firebase.google.com/support/privacy
+- **Apple** and **Google Play** for the Premium purchase: https://www.apple.com/legal/privacy/ and https://policies.google.com/privacy
 
-## Advertising and Your Choices
+Google processes this data in the United States and other countries. For users in the EEA, the UK and Switzerland, Google relies on the EU-U.S. Data Privacy Framework and the EU Standard Contractual Clauses (https://policies.google.com/privacy/frameworks). No data is transferred to us.
 
-### European Union, United Kingdom, and Switzerland (GDPR)
-If you are in the EEA, the UK, or Switzerland, the App shows you a consent form (Google User Messaging Platform) before any ads are requested. Ads are only requested in accordance with the choices you make there. You can review or change your ad consent choices at any time in the App under **Settings → Ad Privacy Settings**.
+## Your choices
 
-### iOS App Tracking Transparency
-On iOS, the App asks for tracking permission (the system App Tracking Transparency prompt) before the first ad is loaded. If you decline, the App does not access your IDFA and you will see non-personalized ads. You can change this choice at any time in **Settings → Privacy & Security → Tracking**.
+- **Ad consent (EEA, UK, Switzerland):** before the first ad, the App shows Google's consent form. Change or withdraw your choice at any time in the App under Settings > Privacy > "Ad Privacy Settings"
+- **iOS tracking:** before the first ad, iOS asks whether the App may track you. Choose "Ask App Not to Track" to keep your advertising identifier from Google. You can change this later in iOS Settings > Privacy & Security > Tracking
+- **Android:** Settings > Google > Ads lets you delete your advertising ID or opt out of ad personalization
+- **Premium:** removes ads and all advertising data collection
+- **Uninstall:** deletes everything stored on your device and stops all collection
+- Usage analytics cannot be switched off inside the App; it contains no advertising identifier and is not used for advertising
 
-### Device-Level Opt-Outs
-- **iOS**: Settings → Privacy & Security → Apple Advertising → Personalized Ads
-- **Android**: Settings → Google → Ads → Reset or delete your advertising ID
+## How long data is kept
 
-## Notifications
+- On-device data: until you uninstall the App
+- Firebase Analytics: up to 14 months, then deleted automatically
+- Firebase Crashlytics: 90 days, then deleted automatically
+- AdMob: under Google's advertising retention rules (IP addresses in ad logs anonymized after 9 months, identifiers after 18 months; https://policies.google.com/technologies/retention)
 
-The App can send an optional daily study reminder. This is a local notification scheduled on your device; no notification data is sent to us or to any third party. Notification permission is only requested if and when you turn reminders on, and you can disable reminders at any time in the App's settings or in your device settings.
+We cannot delete individual analytics or crash records on request: the App has no accounts, so we have no way to find the records that belong to you. That data is not linked to your identity and expires as listed above.
 
-## Backup and Restore
+## Your rights
 
-You can export your learning progress to a file and share or store it using your device's share sheet, and import such a file later. This is entirely user-initiated: the exported file goes only where you choose to send it. We recommend treating exported backup files as your own data and storing them safely.
+**Everyone:** ask us what the App collects (this page is the complete answer), opt out of personalized ads as described above, and delete your on-device data by uninstalling.
 
-## Third-Party Services
+**EEA, UK and Switzerland (GDPR):** you have the rights of access, rectification, erasure, restriction, portability, objection, and to withdraw consent at any time. For the analytics and crash data we cannot identify you, so access, rectification, erasure and portability cannot be fulfilled for it (GDPR Article 11); you can still withdraw ad consent in the App, stop all processing by uninstalling, and exercise rights over advertising data through Google (https://myadcenter.google.com). You may lodge a complaint with your data protection authority (EU list: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en; UK: https://ico.org.uk; Switzerland: https://www.edoeb.admin.ch). We would appreciate the chance to help first.
 
-Our App integrates with the following third-party services:
+**California:** we do not sell personal information. If passing the advertising identifier to Google for personalized ads counts as "sharing", you can opt out with any of the choices above. You may also ask to know, correct or delete personal information and will not be discriminated against for asking; the same identification limit applies. Contact us by e-mail.
 
-### 1. Firebase (Google)
-- **Firebase Analytics**: Anonymous usage analytics
-- **Firebase Crashlytics**: Crash reporting and error tracking
-- **Privacy Policy**: https://policies.google.com/privacy
+## Children
 
-### 2. Google AdMob
-- **Purpose**: Display advertisements (free version only)
-- **Privacy Policy**: https://policies.google.com/privacy
+The App is not directed to children under 13 (16 in the EEA), and we do not knowingly collect personal information from children. If you are a parent or guardian and are concerned, uninstall the App; no individual record exists that we could look up or delete.
 
-### 3. Meta Audience Network
-- **Purpose**: Additional ad network used through AdMob mediation (free version only)
-- **Privacy Policy**: https://www.facebook.com/privacy/policy
+## Premium
 
-### 4. Apple App Store / Google Play Billing
-- **Purpose**: Processing the optional Premium purchase and purchase restoration
-- **Privacy Policies**: https://www.apple.com/legal/privacy/ and https://policies.google.com/privacy
+Premium is a one-time, non-consumable purchase: no subscription, no trial, no recurring charge. It removes all banner ads and unlocks every example audio, starring, and familiar-word management for all word groups. Your premium status is stored on your device and verified with the store; if the store cannot confirm it (for example offline), Premium is kept for a 7-day grace period. "Restore Purchase" in Settings recognizes a purchase made on another device or before a reinstall.
 
-## Data Storage and Security
+## Security
 
-### Local Storage
-- Learning progress and settings are stored locally on your device
-- We operate no servers of our own, and the App does not transmit your learning data to us
-- Data persists until you uninstall the app or clear app data
+Data sent to Google travels over HTTPS/TLS. On-device data is protected by your device's own security.
 
-### Security Measures
-- Local data is protected by your device's built-in security features (such as app sandboxing and device encryption, where enabled)
-- We do not store sensitive personal information
+## About this policy
 
-## Your Rights
+This page describes what happens when you use the App; it is not a request for consent, and using the App is not treated as consent. Where consent is required (personalized ads in the EEA, UK and Switzerland; tracking on iOS), the App asks you separately and you can withdraw at any time. We may update this page; the date at the top changes when we do. The current version is always reachable inside the App under Settings > Privacy > "Privacy Policy".
 
-### If you are in the EEA, UK, or Switzerland (GDPR)
-You have the right to access, correct, delete, and port personal data concerning you, to object to or restrict its processing, and to withdraw consent at any time (via **Settings → Ad Privacy Settings** for advertising, or by contacting us). Because we do not hold your data on any server, most of these rights can be exercised directly on your device: your learning data can be viewed in the App and deleted by clearing app data or uninstalling. You also have the right to lodge a complaint with your local supervisory authority.
+## Contact
 
-### If you are a California resident (CCPA/CPRA)
-We do not sell your personal information. Third-party advertising described above may constitute "sharing" for cross-context behavioral advertising under the CPRA; you can opt out using the advertising choices described in "Advertising and Your Choices."
+**Email:** hello.prseo7@gmail.com
+**Developer and data controller:** PrSeo7 (independent developer)
 
-### Everyone
-- You can view your learning progress within the App
-- You can reset your learning progress by clearing app data or uninstalling the App
-- You can contact us at the address below with any privacy question or request
+## Change history
 
-## Children's Privacy
-
-The App is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal information through the App, please contact us so we can take appropriate action.
-
-## Data Retention
-
-- **Learning Progress and Settings**: Retained locally until app uninstallation or data clearing
-- **Analytics Data**: Retained according to Firebase Analytics policies
-- **Crash Data**: Retained according to Firebase Crashlytics policies
-- **Advertising Data**: Retained according to the respective ad networks' policies
-
-## International Data Transfers
-
-Some of our third-party services may transfer data to countries outside your jurisdiction. These transfers are conducted in accordance with applicable data protection laws and the privacy policies of the respective service providers.
-
-## Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. We will notify you of any changes by:
-- Posting the new Privacy Policy at this location
-- Updating the "Last Updated" date at the top of this policy
-
-Your continued use of the App after any modifications constitutes acceptance of the updated Privacy Policy.
-
-## Contact Information
-
-If you have any questions about this Privacy Policy or our data practices, please contact us at:
-
-**Email**: hello.prseo7@gmail.com
-**App**: JLPT Vocab Master
-**Developer**: PrSeo7
-
----
-
-*This Privacy Policy is effective as of the date listed above.*
+- **September 5, 2026:** Rewritten in plain language. Corrections: Meta Audience Network removed (the App no longer includes it); analytics described as Firebase's standard events plus purchase events, not "which screens you visit" or "anonymous"; no deletion-on-request claim; IP-based approximate location applies to all users; Simplified Chinese listed; on-device storage, system backups, backup export and import, Google Fonts downloads, the iOS identifier for vendors, and crash-report details disclosed; retention periods, legal bases, complaint right, controller and transfer details added; "use = consent" clause removed; children's section states the App is not directed to children under 13 (16 in the EEA); the policy is now linked from inside the App
+- **July 26, 2026:** Advertising consent (UMP/ATT), Meta mediation, reminders, one-time Premium
+- **September 13, 2025:** Revision
+- **September 11, 2025:** First published
