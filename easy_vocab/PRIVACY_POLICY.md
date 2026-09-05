@@ -1,4 +1,4 @@
-# Privacy Policy for EasyVocab (수능 영단어)
+# Privacy Policy for EasyVocab
 
 **Last Updated:** September 4, 2026
 
