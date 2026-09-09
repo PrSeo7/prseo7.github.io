@@ -1,6 +1,6 @@
 # Tabata Timer Privacy Policy
 
-_Last updated: 2026-09-04_
+_Last updated: 2026-09-09_
 
 Tabata Timer (the “App”) is developed by PrSeo7 (“we”, “us”). This policy describes what the App does with data on iOS and Android. It is a description, not a request for consent: where the law requires your consent (for personalized ads), the App asks for it separately, as described in section 5. The App has no accounts, and we run no server of our own. If you do not want the data collection described here, you can buy **Premium** (no advertising data at all) or uninstall the App (no collection at all).
 
@@ -15,7 +15,7 @@ PrSeo7 is the data controller for the processing described below, except where t
 - Your operating system may include this data in its backups (Android backup to your Google account, iOS backups to iCloud or a computer). That is governed by Google’s or Apple’s terms, and it means a reinstall on the same account can bring the data back.
 
 ### 1.2 Usage analytics (Firebase Analytics, by Google)
-- Runs from the first launch, for every user, Premium included. It records which features you use (tab changes, workout start/pause/reset/finish, timer runs, preset changes, the beep toggle, Premium purchase and restore actions including the price and currency of a completed purchase) together with your device model, operating system version and language, and the country or region that Google derives from a masked IP address. No location services are used.
+- Runs from the first launch, for every user, Premium included. It records which features you use (tab changes, workout start/pause/reset/finish, timer runs, preset changes, the beep toggle, Premium purchase and restore actions including the price, currency and store transaction number of a completed purchase) together with your device model, operating system version and language, and the country or region that Google derives from a masked IP address. No location services are used.
 - Events are tied to an installation identifier that Google assigns to this copy of the App (and, on iOS, to Apple’s identifier for vendors), not to your name or an account. We cannot map that identifier to a person.
 - The App does not give Analytics your Advertising ID or IDFA, and it keeps all advertising-related uses of Analytics switched off. Analytics data is used only for product analytics.
 
@@ -112,6 +112,7 @@ Data travels to Google over encrypted connections and is protected by Google’s
 This policy describes what the App does; it is not a contract you accept by using the App. Consent is collected separately where required (the ad consent dialog and the iOS tracking prompt). We update this policy when the App or the law changes and change the date at the top.
 
 **Change history**
+- 2026-09-09: the purchase event sent to Firebase Analytics now includes the store's transaction number, so a single purchase cannot be counted twice. Nothing else changed about what is collected.
 - 2026-09-04: full rewrite after a code review. Added legal bases, the recipients and transfer details, exact retention periods, backups, the notification permission, IP-derived location for all users, and removed promises the App cannot keep (individual deletion, in-app notices). Earlier the same day: ad consent timing, analytics scope, Premium section.
 - 2025-11-09: previous version.
 

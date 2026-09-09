@@ -1,6 +1,6 @@
 # Privacy Policy for EasyVocab
 
-**Last Updated:** September 4, 2026
+**Last Updated:** September 9, 2026
 
 EasyVocab is a vocabulary flashcard app made by PrSeo7, an independent developer. This page explains what data the App handles, why, and what you can do about it. PrSeo7 is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
@@ -17,7 +17,7 @@ EasyVocab is a vocabulary flashcard app made by PrSeo7, an independent developer
 **Usage analytics (Firebase Analytics, all users)**
 - Device model and operating system version
 - A Firebase installation identifier that Google assigns to this installation (it changes if you reinstall); on iOS also Apple's identifier for vendors (IDFV), which is shared by all PrSeo7 apps on your device
-- How you use the App: features used, learning and review actions (for example marking a word as learned, or the result of a review), and purchase or restore events, including the price and currency of the Premium purchase
+- How you use the App: features used, learning and review actions (for example marking a word as learned, or the result of a review), and purchase or restore events, including the price, the currency and the store's transaction number for the Premium purchase
 - Your premium status and app theme
 - Approximate location at country/region level, which Google derives from a masked IP address. This applies to all users, including Premium. The App requests no location permission and never uses your device's location services
 - Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you allow tracking in the system prompt
@@ -111,6 +111,7 @@ This page describes what happens when you use the App; it is not a request for c
 
 ## Change history
 
+- **September 9, 2026:** The purchase event sent to Firebase Analytics now includes the store's transaction number, so a single purchase cannot be counted twice. Nothing else changed about what is collected
 - **September 4, 2026:** Rewritten in plain language. Same-day corrections: no deletion-on-request claim; IP-based approximate location applies to all users; Premium is a one-time purchase; analytics identifier described as Firebase installation ID plus iOS IDFV; purchase price/currency to analytics, Google Fonts downloads and system backups disclosed; legal bases, complaint right, controller and transfer details added; "use = consent" clause removed
 - **July 26, 2026:** Advertising consent (UMP/ATT), reminders, one-time purchase
 - **December 30, 2024:** First version
