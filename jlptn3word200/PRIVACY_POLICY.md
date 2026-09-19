@@ -1,6 +1,6 @@
 # Privacy Policy for JLPT Vocab Master
 
-**Last Updated:** September 5, 2026
+**Last Updated:** September 18, 2026
 
 JLPT Vocab Master (shown on your device as "JLPT Vocab") is a Japanese vocabulary flashcard app made by PrSeo7, an independent developer. This page explains what data the App handles, why, and what you can do about it. PrSeo7 is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
@@ -17,7 +17,7 @@ JLPT Vocab Master (shown on your device as "JLPT Vocab") is a Japanese vocabular
 **Usage analytics (Firebase Analytics, all users)**
 - Device model and operating system version
 - A Firebase installation identifier that Google assigns to this installation (it changes if you reinstall); on iOS also Apple's identifier for vendors (IDFV), which is shared by all PrSeo7 apps on your device
-- App opens and session length (Firebase's standard events), and Premium purchase or restore events: which product, whether it succeeded, and for a completed purchase its price and currency. The App sends no record of which words you study or how you answer
+- App opens and session length (Firebase's standard events), Premium purchase or restore events (which product, whether it succeeded, and for a completed purchase its price and currency), and, when you open the Study Calendar, the number of days on which you have studied. The App sends no record of which words you study or how you answer
 - Approximate location at country/region level, which Google derives from a masked IP address. This applies to all users, including Premium. The App requests no location permission and never uses your device's location services
 - Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you allow tracking in the system prompt
 
@@ -110,6 +110,7 @@ This page describes what happens when you use the App; it is not a request for c
 
 ## Change history
 
+- **September 18, 2026:** Study Calendar added. When you open it, analytics also receives the number of days on which you have studied (a single count)
 - **September 5, 2026:** Rewritten in plain language. Corrections: Meta Audience Network removed (the App no longer includes it); analytics described as Firebase's standard events plus purchase events, not "which screens you visit" or "anonymous"; no deletion-on-request claim; IP-based approximate location applies to all users; Simplified Chinese listed; on-device storage, system backups, backup export and import, Google Fonts downloads, the iOS identifier for vendors, and crash-report details disclosed; retention periods, legal bases, complaint right, controller and transfer details added; "use = consent" clause removed; children's section states the App is not directed to children under 13 (16 in the EEA); the policy is now linked from inside the App
 - **July 26, 2026:** Advertising consent (UMP/ATT), Meta mediation, reminders, one-time Premium
 - **September 13, 2025:** Revision

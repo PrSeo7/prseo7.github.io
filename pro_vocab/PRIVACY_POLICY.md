@@ -1,6 +1,6 @@
 # Privacy Policy for ProVocab
 
-**Last Updated:** September 8, 2026
+**Last Updated:** September 19, 2026
 
 ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer. This page explains what data the App handles, why, and what you can do about it. PrSeo7 is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
@@ -17,7 +17,7 @@ ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer.
 **Usage analytics (Firebase Analytics, all users)**
 - Device model and operating system version
 - A Firebase installation identifier that Google assigns to this installation (it changes if you reinstall); on iOS also Apple's identifier for vendors (IDFV), which is shared by all PrSeo7 apps on your device
-- How you use the App: review sessions and each review result (whether you remembered or forgot a word), study-streak milestones, theme changes, whether banner ads loaded and were shown, taps on the "More by PrSeo7" links, and purchase or restore events, including the price, the currency and the store's transaction number for the Premium purchase
+- How you use the App: review sessions and each review result (whether you remembered or forgot a word), study-streak milestones, theme changes, whether banner ads loaded and were shown, taps on the "More by PrSeo7" links, opening the study calendar (with the number of days you have studied), and purchase or restore events, including the price, the currency and the store's transaction number for the Premium purchase
 - Your premium status and app theme
 - Approximate location at country/region level, which Google derives from a masked IP address. This applies to all users, including Premium. The App requests no location permission and never uses your device's location services
 - Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you allow tracking in the system prompt and you are outside the regions where ad consent is required
@@ -112,6 +112,7 @@ This page describes what happens when you use the App; it is not a request for c
 
 ## Change history
 
+- **September 19, 2026:** Added the Study Calendar. Opening it sends one analytics event with the number of days you have studied. Nothing else changed about what is collected.
 - **September 8, 2026:** The purchase event sent to Firebase Analytics now includes the store's transaction number, and is sent only once per purchase. It previously could be sent twice for a single purchase, which double-counted it. Nothing else changed about what is collected.
 - **September 5, 2026:** Rewritten in plain language and re-checked against the app. Corrections: no deletion-on-request claim; IP-based approximate location applies to all users; Premium is a one-time purchase, not a subscription; the analytics identifier is the Firebase installation ID plus the iOS IDFV; the list of usage data now matches what the app actually sends (language preferences, screens viewed, learned-word and audio actions removed; review results, streaks, purchase price, ad outcomes added); the ad consent form and "Ad Privacy Settings", the iOS tracking prompt, daily reminders, backup export/import, system backups and Google Fonts downloads are described; legal bases, complaint right, controller and transfer details added; the "use = consent" clause and the in-app-notice promise removed
 - **January 24, 2026:** First version
