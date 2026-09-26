@@ -1,6 +1,6 @@
 # Privacy Policy for ProVocab
 
-**Last Updated:** September 24, 2026
+**Last Updated:** September 26, 2026
 
 ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer. This page explains what data the App handles, why, and what you can do about it. PrSeo7 is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
@@ -20,13 +20,13 @@ ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer.
 - How you use the App: review sessions and each review result (whether you remembered or forgot a word), study-streak milestones, theme changes, whether banner ads loaded and were shown, taps on the "More by PrSeo7" links, opening the study calendar (with the number of days you have studied), and purchase or restore events, including the price, the currency and the store's transaction number for the Premium purchase
 - Your premium status and app theme
 - Approximate location at country/region level, which Google derives from a masked IP address. This applies to all users, including Premium. The App requests no location permission and never uses your device's location services
-- Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you chose personalized ads and allowed tracking in the system prompt
+- Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you allowed tracking in the iOS tracking prompt
 
 **Crash reports (Firebase Crashlytics, all users)**
 - Crash logs and stack traces, errors reported by the app framework, the device state at the time, and an installation identifier used to count affected devices
 
 **Advertising (Unity Ads and ironSource Ads, mediated by Unity LevelPlay; free version only)**
-- The device advertising ID (on iOS only if tracking is allowed for the App in iOS Settings — the App asks only after you choose personalized ads; on Android according to your device's ad settings), your IP address (Unity may estimate an approximate location from it), device information, and which ads were shown or tapped
+- The device advertising ID (on iOS only if you allowed tracking for the App; on Android according to your device's ad settings), your IP address (Unity may estimate an approximate location from it), device information, and which ads were shown or tapped
 - Advertising data is collected only while ads are shown, never for Premium users, and starting from the first screen that shows an ad, not at launch
 - On iOS, ad-driven installs may be attributed through Apple's SKAdNetwork, which does not identify you
 
@@ -48,7 +48,7 @@ ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer.
 |---|---|---|
 | Learning data on your device | Provide the App | Not processed by us |
 | Analytics and crash reports | Understand usage, fix crashes | Legitimate interests (GDPR Art. 6(1)(f)) |
-| Personalized ads (free version) | Fund the free version | Your consent (Art. 6(1)(a)), given in the App's consent sheet |
+| Personalized ads (free version) | Fund the free version | Your consent (Art. 6(1)(a)), given in the iOS tracking prompt (iOS) or the App's consent sheet (Android) |
 | Ads in general (free version) | Fund the free version | Legitimate interests (Art. 6(1)(f)) |
 | Font download | Display the App's text | Legitimate interests (Art. 6(1)(f)) |
 | Premium purchase | Unlock Premium, restore it later | Contract (Art. 6(1)(b)) |
@@ -66,13 +66,12 @@ Google and Unity process this data in the United States and other countries. For
 
 ## Your choices
 
-- **Ad consent (everyone):** before the first ad, the App asks you to choose between "Personalized ads" and "Non-personalized ads". Change your choice at any time in the App under Settings > Privacy > "Ad Privacy Settings"
-- **iOS tracking:** if you choose personalized ads, iOS then asks whether the App may track you. Choose "Ask App Not to Track" to keep your advertising identifier from Unity. You can change this later in iOS Settings > Privacy & Security > Tracking
+- **Ad consent (everyone):** before the first ad, the App asks how ads are chosen. On iOS, an information screen with a "Continue" button is followed by the iOS tracking prompt (unless you already answered the iOS tracking prompt): "Allow" means personalized ads, "Ask App Not to Track" means non-personalized ads; change it at any time in iOS Settings > ProVocab > "Allow Tracking" (the App's Settings > Privacy > "Ad Privacy Settings" shows the current state, "Personalized ads: allowed" or "Personalized ads: not allowed", and an "Open Settings" button that links there). On Android, the App asks you to choose between "Personalized ads" and "Non-personalized ads"; change it under Settings > Privacy > "Ad Privacy Settings"
 - **Inside an ad:** Unity's Data Privacy icon lets you opt out of personalized ads with Unity directly
 - **Android:** Settings > Google > Ads lets you delete your advertising ID or opt out of ad personalization
 - **Premium:** removes ads and all advertising data collection
 - **Uninstall:** deletes everything stored on your device and stops all collection
-- Usage analytics cannot be switched off inside the App; it contains no advertising identifier unless you chose personalized ads and allowed tracking, and it is not used for advertising
+- Usage analytics cannot be switched off inside the App; it contains no advertising identifier unless you allowed tracking, and it is not used for advertising
 
 ## How long data is kept
 
@@ -88,7 +87,7 @@ We cannot delete individual analytics or crash records on request: the App has n
 
 **Everyone:** ask us what the App collects (this page is the complete answer), opt out of personalized ads as described above, and delete your on-device data by uninstalling.
 
-**EEA, UK and Switzerland (GDPR):** you have the rights of access, rectification, erasure, restriction, portability, objection, and to withdraw consent at any time. For the analytics and crash data we cannot identify you, so access, rectification, erasure and portability cannot be fulfilled for it (GDPR Article 11); you can still withdraw ad consent in the App, stop all processing by uninstalling, and exercise rights over advertising data through Unity (https://unity.com/legal/game-player-and-app-user-privacy-policy). You may lodge a complaint with your data protection authority (EU list: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en; UK: https://ico.org.uk; Switzerland: https://www.edoeb.admin.ch). We would appreciate the chance to help first.
+**EEA, UK and Switzerland (GDPR):** you have the rights of access, rectification, erasure, restriction, portability, objection, and to withdraw consent at any time. For the analytics and crash data we cannot identify you, so access, rectification, erasure and portability cannot be fulfilled for it (GDPR Article 11); you can still withdraw ad consent (in iOS Settings, or in the App on Android), stop all processing by uninstalling, and exercise rights over advertising data through Unity (https://unity.com/legal/game-player-and-app-user-privacy-policy). You may lodge a complaint with your data protection authority (EU list: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en; UK: https://ico.org.uk; Switzerland: https://www.edoeb.admin.ch). We would appreciate the chance to help first.
 
 **California:** we do not sell personal information. If passing the advertising identifier to Unity for personalized ads counts as "sharing", you can opt out with any of the choices above. You may also ask to know, correct or delete personal information and will not be discriminated against for asking; the same identification limit applies. Contact us by e-mail.
 
@@ -115,6 +114,7 @@ This page describes what happens when you use the App; it is not a request for c
 
 ## Change history
 
+- **September 26, 2026:** On iOS the tracking prompt is now the ad-consent question, preceded by an information screen with a "Continue" button; change it in the iOS Settings app. Android is unchanged. Nothing changed about what is collected.
 - **September 24, 2026:** Ads are now served by Unity's networks Unity Ads and ironSource Ads (mediated by Unity LevelPlay) instead of Google AdMob. The ad-consent question is asked by the App itself, to every user of the free version, before the first ad; the iOS tracking prompt appears only if you choose personalized ads. Recipients, retention and transfers updated for Unity. Nothing else changed about what is collected.
 - **September 19, 2026:** Added the Study Calendar. Opening it sends one analytics event with the number of days you have studied. Nothing else changed about what is collected.
 - **September 8, 2026:** The purchase event sent to Firebase Analytics now includes the store's transaction number, and is sent only once per purchase. It previously could be sent twice for a single purchase, which double-counted it. Nothing else changed about what is collected.
