@@ -8,7 +8,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-LOGO=images/screen.png
+LOGO=images/logo.png
 OUT=images/prseo7-og-image.png
 FONT_BOLD="/System/Library/Fonts/Supplemental/Arial Bold.ttf"
 FONT_REGULAR="/System/Library/Fonts/Supplemental/Arial.ttf"
