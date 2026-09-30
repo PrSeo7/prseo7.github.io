@@ -1,3 +1,7 @@
+---
+# Front matter makes Jekyll process the {% include %} tags below; layout: null keeps this a standalone page.
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,55 +54,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="PrSeo7">
 
-  <!-- Favicons -->
-  <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+{% include site-head.html %}
 
-  <!-- Web App Manifest -->
-  <link rel="manifest" href="/manifest.json">
-
-  <!-- Google Analytics 4, basic Consent Mode: gtag.js is not loaded and nothing is
-       sent until the visitor accepts in the cookie banner. Keep /privacy-policy/ in
-       sync with what this block collects. -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied'
-    });
-
-    window.GA_MEASUREMENT_ID = 'G-G7Y10CF072';
-    window.loadAnalytics = function () {
-      if (window.analyticsLoaded) return;
-      window.analyticsLoaded = true;
-      window['ga-disable-' + window.GA_MEASUREMENT_ID] = false;
-      gtag('consent', 'update', { analytics_storage: 'granted' });
-      // Re-accepting after a withdrawal on the same page: gtag.js is already loaded
-      if (window.analyticsScriptAdded) return;
-      window.analyticsScriptAdded = true;
-      gtag('js', new Date());
-      gtag('config', window.GA_MEASUREMENT_ID, {
-        page_title: 'PrSeo7 - Software Development Services',
-        allow_google_signals: false,
-        allow_ad_personalization_signals: false
-      });
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
-      document.head.appendChild(s);
-    };
-
-    try {
-      if (localStorage.getItem('cookie-consent') === 'accepted') window.loadAnalytics();
-    } catch (e) { }
-  </script>
+{% include analytics.html title="PrSeo7 - Software Development Services" %}
 
   <!-- Resource Hints for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -254,77 +212,6 @@
       opacity: 1 !important;
       transform: none !important;
     }
-
-    /* Cookie Consent Banner */
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(51, 51, 51, 0.95);
-      color: white;
-      padding: 1rem 0;
-      z-index: 10000;
-      backdrop-filter: blur(10px);
-    }
-
-    .cookie-banner p {
-      margin: 0 0 1rem 0;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .cookie-banner a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    .cookie-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: flex-end;
-    }
-
-    .cookie-btn {
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .cookie-btn.accept {
-      background: #667eea;
-      color: white;
-    }
-
-    .cookie-btn.accept:hover {
-      background: #5a6fd8;
-    }
-
-    .cookie-btn.decline {
-      background: transparent;
-      color: #ccc;
-      border: 1px solid #ccc;
-    }
-
-    .cookie-btn.decline:hover {
-      background: #ccc;
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .cookie-buttons {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .cookie-btn {
-        width: 100%;
-      }
-    }
   </style>
 
   <!-- Structured Data (JSON-LD) -->
@@ -332,6 +219,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://prseo7.github.io/#organization",
       "name": "PrSeo7",
       "url": "https://prseo7.github.io",
       "logo": "https://prseo7.github.io/images/logo.png",
@@ -784,6 +672,24 @@
     .fade-in-up {
       animation: fadeInUp 0.6s ease-out;
     }
+
+    a.product-image {
+      text-decoration: none;
+    }
+
+    .product-image img {
+      border-radius: 22%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .product-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .product-title a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -842,11 +748,14 @@
       <div class="products-grid">
         <!-- JLPT Vocab Master -->
         <div class="product-card">
-          <div class="product-image">
-            <i class="fas fa-language" aria-label="JLPT Vocab Master Icon" title="JLPT Vocabulary Learning"></i>
-          </div>
+          <a class="product-image" href="/jlpt-vocab-master/">
+            <picture>
+              <source srcset="/images/apps/jlpt-vocab-master/icon.webp" type="image/webp">
+              <img src="/images/apps/jlpt-vocab-master/icon.png" alt="JLPT Vocab Master app icon" width="120" height="120" loading="lazy">
+            </picture>
+          </a>
           <div class="product-content">
-            <h3 class="product-title">JLPT Vocab Master</h3>
+            <h3 class="product-title"><a href="/jlpt-vocab-master/">JLPT Vocab Master</a></h3>
             <p class="product-description">Master Japanese vocabulary for JLPT exams with our comprehensive app.
               Features interactive flashcards, audio pronunciation, and customized review systems. Available on iOS and
               Android.</p>
@@ -859,11 +768,11 @@
             <div
               style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: auto;">
               <a href="https://apps.apple.com/us/app/jlpt-vocab-master/id6746373058" target="_blank" rel="noopener">
-                <img src="images/app_store.svg" alt="App Store" width="60" height="60">
+                <img src="images/app_store.svg" alt="Download JLPT Vocab Master on the App Store" width="60" height="60">
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.prseo07.jlptn3words200" target="_blank"
                 rel="noopener">
-                <img src="images/play_store.svg" alt="Play Store" width="60" height="60">
+                <img src="images/play_store.svg" alt="Download JLPT Vocab Master on Google Play" width="60" height="60">
               </a>
             </div>
           </div>
@@ -871,11 +780,14 @@
 
         <!-- EasyVocab – English Vocabulary -->
         <div class="product-card">
-          <div class="product-image">
-            <i class="fas fa-book-open" aria-label="EasyVocab Icon" title="English Vocabulary Learning"></i>
-          </div>
+          <a class="product-image" href="/easyvocab/">
+            <picture>
+              <source srcset="/images/apps/easyvocab/icon.webp" type="image/webp">
+              <img src="/images/apps/easyvocab/icon.png" alt="EasyVocab app icon" width="120" height="120" loading="lazy">
+            </picture>
+          </a>
           <div class="product-content">
-            <h3 class="product-title">EasyVocab – English Vocabulary</h3>
+            <h3 class="product-title"><a href="/easyvocab/">EasyVocab – English Vocabulary</a></h3>
             <p class="product-description">Expand your English vocabulary with EasyVocab. A user-friendly app designed
               to help learners master essential English words through effective learning methods. Available on iOS and
               Android.</p>
@@ -889,11 +801,11 @@
               style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: auto;">
               <a href="https://apps.apple.com/us/app/easyvocab-english-vocabulary/id6757153410" target="_blank"
                 rel="noopener">
-                <img src="images/app_store.svg" alt="App Store" width="60" height="60">
+                <img src="images/app_store.svg" alt="Download EasyVocab on the App Store" width="60" height="60">
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.prseo7.hello_english" target="_blank"
                 rel="noopener">
-                <img src="images/play_store.svg" alt="Play Store" width="60" height="60">
+                <img src="images/play_store.svg" alt="Download EasyVocab on Google Play" width="60" height="60">
               </a>
             </div>
           </div>
@@ -901,12 +813,14 @@
 
         <!-- ProVocab Advanced -->
         <div class="product-card">
-          <div class="product-image">
-            <i class="fas fa-graduation-cap" aria-label="ProVocab Advanced Icon"
-              title="Advanced Vocabulary Learning"></i>
-          </div>
+          <a class="product-image" href="/provocab/">
+            <picture>
+              <source srcset="/images/apps/provocab/icon.webp" type="image/webp">
+              <img src="/images/apps/provocab/icon.png" alt="ProVocab Advanced app icon" width="120" height="120" loading="lazy">
+            </picture>
+          </a>
           <div class="product-content">
-            <h3 class="product-title">ProVocab Advanced</h3>
+            <h3 class="product-title"><a href="/provocab/">ProVocab Advanced</a></h3>
             <p class="product-description">Take your vocabulary to the next level with ProVocab Advanced. Designed for
               serious learners who want to master advanced English vocabulary and expressions.</p>
             <ul class="product-features">
@@ -918,7 +832,7 @@
             <div
               style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: auto;">
               <a href="https://apps.apple.com/us/app/provocab-advanced/id6758212374" target="_blank" rel="noopener">
-                <img src="images/app_store.svg" alt="App Store" width="60" height="60">
+                <img src="images/app_store.svg" alt="Download ProVocab Advanced on the App Store" width="60" height="60">
               </a>
             </div>
           </div>
@@ -926,11 +840,14 @@
 
         <!-- Tabata Timer -->
         <div class="product-card">
-          <div class="product-image">
-            <i class="fas fa-stopwatch" aria-label="Tabata Timer Icon" title="HIIT Workout Timer"></i>
-          </div>
+          <a class="product-image" href="/tabata-timer/">
+            <picture>
+              <source srcset="/images/apps/tabata-timer/icon.webp" type="image/webp">
+              <img src="/images/apps/tabata-timer/icon.png" alt="Tabata Timer app icon" width="120" height="120" loading="lazy">
+            </picture>
+          </a>
           <div class="product-content">
-            <h3 class="product-title">Tabata Timer – HIIT Workout</h3>
+            <h3 class="product-title"><a href="/tabata-timer/">Tabata Timer – HIIT Workout</a></h3>
             <p class="product-description">A simple, focused interval timer for Tabata and HIIT workouts. Set your
               prep, work, and rest durations, then let the countdown beeps guide you through every round. Available on
               iOS and Android.</p>
@@ -944,11 +861,11 @@
               style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: auto;">
               <a href="https://apps.apple.com/us/app/tabata-timer-hiit-workout/id6755084571" target="_blank"
                 rel="noopener">
-                <img src="images/app_store.svg" alt="App Store" width="60" height="60">
+                <img src="images/app_store.svg" alt="Download Tabata Timer on the App Store" width="60" height="60">
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.prseo7.tabatatimer" target="_blank"
                 rel="noopener">
-                <img src="images/play_store.svg" alt="Play Store" width="60" height="60">
+                <img src="images/play_store.svg" alt="Download Tabata Timer on Google Play" width="60" height="60">
               </a>
             </div>
           </div>
@@ -969,18 +886,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-consent" class="cookie-banner" style="display: none;">
-    <div class="container">
-      <p>With your permission, we use Google Analytics cookies to see how visitors use this site. Nothing is sent to
-        Google unless you accept. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
-      <div class="cookie-buttons">
-        <button id="accept-cookies" class="cookie-btn accept">Accept</button>
-        <button id="decline-cookies" class="cookie-btn decline">Decline</button>
-      </div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer>
@@ -1140,73 +1045,9 @@
           }, 1000);
         });
       }
-
-      // Cookie Consent Management
-      function readConsent() {
-        try { return localStorage.getItem('cookie-consent'); } catch (e) { return null; }
-      }
-
-      function saveConsent(value) {
-        try { localStorage.setItem('cookie-consent', value); } catch (e) { }
-      }
-
-      function showCookieConsent(force) {
-        const banner = document.getElementById('cookie-consent');
-        if (banner && (force || !readConsent())) {
-          banner.style.display = 'block';
-        }
-      }
-
-      // Remove the _ga / _ga_<id> cookies set while consent was granted
-      function deleteAnalyticsCookies() {
-        const host = window.location.hostname;
-        document.cookie.split(';').forEach(function (c) {
-          const name = c.split('=')[0].trim();
-          if (name === '_ga' || name.indexOf('_ga_') === 0) {
-            [host, '.' + host].forEach(function (domain) {
-              document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + domain;
-            });
-            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
-          }
-        });
-      }
-
-      function acceptCookies() {
-        saveConsent('accepted');
-        document.getElementById('cookie-consent').style.display = 'none';
-        window.loadAnalytics();
-      }
-
-      function declineCookies() {
-        saveConsent('declined');
-        document.getElementById('cookie-consent').style.display = 'none';
-
-        // Withdrawal after an earlier Accept: stop sending and remove the cookies
-        if (window.analyticsLoaded) {
-          gtag('consent', 'update', { analytics_storage: 'denied' });
-          window['ga-disable-' + window.GA_MEASUREMENT_ID] = true;
-          window.analyticsLoaded = false;
-        }
-        deleteAnalyticsCookies();
-      }
-
-      // Initialize cookie consent
-      document.addEventListener('DOMContentLoaded', function () {
-        const acceptBtn = document.getElementById('accept-cookies');
-        const declineBtn = document.getElementById('decline-cookies');
-        const settingsLink = document.getElementById('cookie-settings');
-
-        if (acceptBtn) acceptBtn.addEventListener('click', acceptCookies);
-        if (declineBtn) declineBtn.addEventListener('click', declineCookies);
-        if (settingsLink) settingsLink.addEventListener('click', function () {
-          showCookieConsent(true);
-        });
-
-        // Show banner if no consent given
-        setTimeout(showCookieConsent, 2000);
-      });
     })();
   </script>
+{% include cookie-banner.html %}
 </body>
 
 </html>

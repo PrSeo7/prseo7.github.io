@@ -2,7 +2,7 @@
 
 **Last Updated:** September 30, 2026
 
-This policy covers the website **prseo7.github.io** (the home page and this page). It explains what data the site handles, why, and what you can do about it. PrSeo7, an independent app developer, is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
+This policy covers the website **prseo7.github.io** (the home page, the app pages such as /easyvocab/, and this page). It explains what data the site handles, why, and what you can do about it. PrSeo7, an independent app developer, is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
 Each PrSeo7 app has its own privacy policy, listed at the end of this page. This policy does not cover the apps.
 
@@ -10,15 +10,15 @@ Each PrSeo7 app has its own privacy policy, listed at the end of this page. This
 
 - The site has **no accounts, no forms and no ads**. It never asks for your name or e-mail address.
 - We use **Google Analytics only if you click "Accept"** in the cookie banner. If you click "Decline" or ignore the banner, no analytics data is sent and no analytics cookies are set.
-- You can change your choice at any time with **"Cookie Settings"** at the bottom of the home page.
+- You can change your choice at any time with **"Cookie Settings"** at the bottom of the home page and of each app page.
 - We run no server of our own and receive no data about you directly.
 
 ## What is collected
 
 **Google Analytics (only after you accept)**
 
-If you accept, the home page loads Google Analytics 4 and sends Google:
-- the pages you view and the links you click on the home page (including links to the App Store and Google Play)
+If you accept, the home page and the app pages load Google Analytics 4 and send Google:
+- the pages you view and the links you click on them (including links to the App Store and Google Play)
 - page load times
 - your browser, device type, operating system, screen size and language
 - an approximate location (country and city) that Google derives from your IP address
@@ -67,7 +67,7 @@ Google may process the data in the United States. Google relies on the EU-U.S. D
 
 ## Your choices and rights
 
-- **Withdraw consent:** click "Cookie Settings" at the bottom of the home page, then "Decline". Analytics stops at once, and the site deletes its analytics cookies from your browser.
+- **Withdraw consent:** click "Cookie Settings" at the bottom of the home page or any app page, then "Decline". Analytics stops at once, and the site deletes its analytics cookies from your browser.
 - **Block it yourself:** clearing your cookies, using private browsing, or installing the Google Analytics opt-out add-on (https://tools.google.com/dlpage/gaoptout) also stops collection.
 - **EEA, UK and Switzerland:** you have the rights of access, rectification, erasure, restriction, portability and objection, and the right to withdraw consent. We hold no identifier that links Google Analytics records to you, so we cannot find, show or delete an individual visitor's records (GDPR Article 11). Withdrawing consent stops all further collection, and the records expire as described above.
 - **Complaints:** you may lodge a complaint with your data protection authority (EU list: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en; UK: https://ico.org.uk; Switzerland: https://www.edoeb.admin.ch). We would appreciate the chance to help first.
@@ -94,3 +94,4 @@ PrSeo7 (data controller) — hello.prseo7@gmail.com
 ## Change history
 
 - **September 30, 2026:** First version, published together with the cookie banner that asks for consent before Google Analytics loads.
+- **September 30, 2026 (later the same day):** Scope extended to the app landing pages (/jlpt-vocab-master/, /easyvocab/, /ko/easyvocab/, /provocab/, /tabata-timer/), which use the same cookie banner and Google Analytics setup.

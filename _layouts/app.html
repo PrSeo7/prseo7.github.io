@@ -1,0 +1,257 @@
+---
+---
+{%- comment -%}
+  App landing page. Every section, head tag and JSON-LD node comes from the page's
+  front matter (schema: _docs/superpowers/specs/2026-09-30-app-landing-pages-design.md),
+  so the visible text and the structured data stay identical.
+{%- endcomment -%}
+{%- assign L = site.data.app_labels[page.lang] | default: site.data.app_labels.en -%}
+{%- assign site_url = "https://prseo7.github.io" -%}
+{%- assign canonical = page.url | prepend: site_url -%}
+{%- assign img_dir = "/images/apps/" | append: page.slug -%}
+{%- assign icon_png = img_dir | append: "/icon.png" -%}
+{%- assign downloads = "" | split: "" -%}
+{%- if page.stores.ios -%}{%- assign downloads = downloads | push: page.stores.ios -%}{%- endif -%}
+{%- if page.stores.android -%}{%- assign downloads = downloads | push: page.stores.android -%}{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | escape }}</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ canonical }}">
+{%- if page.alternate %}
+{%- for alt in page.alternate %}
+  <link rel="alternate" hreflang="{{ alt[0] }}" href="{{ site_url }}{{ alt[1] }}">
+{%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ site_url }}{{ page.alternate.en }}">
+{%- endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:image" content="{{ site_url }}{{ icon_png }}">
+  <meta property="og:image:width" content="256">
+  <meta property="og:image:height" content="256">
+  <meta property="og:image:alt" content="{{ L.icon_alt | replace: '%s', page.app_name | escape }}">
+  <meta property="og:site_name" content="PrSeo7">
+  <meta property="og:locale" content="{% if page.lang == 'ko' %}ko_KR{% else %}en_US{% endif %}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:image" content="{{ site_url }}{{ icon_png }}">
+  <meta name="theme-color" content="#667eea">
+{% include site-head.html %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/app.css">
+{% include analytics.html title=page.title %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ site_url }}/#organization",
+        "name": "PrSeo7",
+        "url": "{{ site_url }}/"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "{{ canonical }}#app",
+        "name": {{ page.app_name | jsonify }},
+{%- if page.alternate_name %}
+        "alternateName": {{ page.alternate_name | jsonify }},
+{%- endif %}
+        "description": {{ page.definition | jsonify }},
+        "url": "{{ canonical }}",
+        "image": "{{ site_url }}{{ icon_png }}",
+        "operatingSystem": {{ page.os | join: ", " | jsonify }},
+        "applicationCategory": {{ page.category | jsonify }},
+        "inLanguage": {{ page.app_languages | jsonify }},
+        "downloadUrl": {{ downloads | jsonify }},
+        "sameAs": {{ downloads | jsonify }},
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "{{ site_url }}/#organization" },
+        "publisher": { "@id": "{{ site_url }}/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "{{ canonical }}#faq",
+        "inLanguage": {{ page.lang | jsonify }},
+        "mainEntity": [
+{%- for f in page.faq %}
+          {
+            "@type": "Question",
+            "name": {{ f.q | jsonify }},
+            "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | jsonify }} }
+          }{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": {{ L.home | jsonify }}, "item": "{{ site_url }}/" },
+          { "@type": "ListItem", "position": 2, "name": {{ page.app_name | jsonify }}, "item": "{{ canonical }}" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-bar">
+    <div class="container">
+      <a href="/" class="brand">PrSeo7</a>
+      <a href="/#products">{{ L.apps }}</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <picture>
+          <source srcset="{{ img_dir }}/icon.webp" type="image/webp">
+          <img class="app-icon" src="{{ icon_png }}" alt="{{ L.icon_alt | replace: '%s', page.app_name | escape }}" width="128" height="128">
+        </picture>
+        <h1>{{ page.app_name }}</h1>
+        <p class="definition">{{ page.definition }}</p>
+        <div class="stores">
+{%- if page.stores.ios %}
+          <a class="store-btn" href="{{ page.stores.ios }}" rel="noopener" aria-label="{{ L.ios_aria | replace: '%s', page.app_name | escape }}">
+            <img src="/images/app_store.svg" alt="" width="28" height="28"><span>{{ L.ios_cta }}</span>
+          </a>
+{%- endif %}
+{%- if page.stores.android %}
+          <a class="store-btn" href="{{ page.stores.android }}" rel="noopener" aria-label="{{ L.android_aria | replace: '%s', page.app_name | escape }}">
+            <img src="/images/play_store.svg" alt="" width="28" height="28"><span>{{ L.android_cta }}</span>
+          </a>
+{%- endif %}
+        </div>
+      </div>
+    </section>
+
+{%- if page.screenshots and page.screenshots.size > 0 %}
+    <section class="screenshots" aria-labelledby="screenshots-h">
+      <div class="container">
+        <h2 id="screenshots-h">{{ L.screenshots }}</h2>
+        <div class="shots">
+{%- for s in page.screenshots %}
+          <img src="{{ s.src }}" alt="{{ s.alt | escape }}" width="{{ s.width }}" height="{{ s.height }}" loading="lazy">
+{%- endfor %}
+        </div>
+      </div>
+    </section>
+{%- endif %}
+
+    <section aria-labelledby="features-h">
+      <div class="container">
+        <h2 id="features-h">{{ L.features }}</h2>
+        <ul class="features">
+{%- for item in page.features %}
+          <li>{{ item }}</li>
+{%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="how-h">
+      <div class="container">
+        <h2 id="how-h">{{ L.how }}</h2>
+        <ol class="steps">
+{%- for step in page.steps %}
+          <li>{{ step }}</li>
+{%- endfor %}
+        </ol>
+      </div>
+    </section>
+
+{%- if page.premium %}
+    <section aria-labelledby="premium-h">
+      <div class="container">
+        <h2 id="premium-h">{{ L.premium }}</h2>
+        <div class="plans">
+          <div class="plan">
+            <h3>{{ L.free }}</h3>
+            <ul>
+{%- for item in page.premium.free %}
+              <li>{{ item }}</li>
+{%- endfor %}
+            </ul>
+          </div>
+          <div class="plan plan-paid">
+            <h3>{{ L.paid }}</h3>
+            <ul>
+{%- for item in page.premium.paid %}
+              <li>{{ item }}</li>
+{%- endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+{%- endif %}
+
+    <section aria-labelledby="faq-h">
+      <div class="container">
+        <h2 id="faq-h">{{ L.faq }}</h2>
+{%- for f in page.faq %}
+        <div class="faq-item">
+          <h3>{{ f.q }}</h3>
+          <p>{{ f.a }}</p>
+        </div>
+{%- endfor %}
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>{{ L.last_updated }}: <time datetime="{{ page.last_updated | date: '%Y-%m-%d' }}">{{ page.last_updated | date: '%Y-%m-%d' }}</time></p>
+      <p class="ids">
+        {%- if page.identifiers.app_store_id %}{{ L.app_store_id }} {{ page.identifiers.app_store_id }}{% endif -%}
+        {%- if page.identifiers.ios_bundle %} · {{ L.ios_bundle }} {{ page.identifiers.ios_bundle }}{% endif -%}
+        {%- if page.identifiers.android_package %} · {{ L.android_package }} {{ page.identifiers.android_package }}{% endif -%}
+      </p>
+      <nav class="footer-links">
+        <a href="{{ page.privacy_url }}">{{ L.app_privacy | replace: '%s', page.app_name }}</a>
+        <a href="/privacy-policy/">{{ L.site_privacy }}</a>
+        <button type="button" id="cookie-settings">{{ L.cookie_settings }}</button>
+      </nav>
+      <p class="other-apps-title">{{ L.other_apps }}</p>
+      <ul class="other-apps">
+{%- assign others = site.pages | where: "layout", "app" | where: "lang", "en" | sort: "app_name" %}
+{%- assign alt_urls = "" | split: "" -%}{%- for a in page.alternate -%}{%- assign alt_urls = alt_urls | push: a[1] -%}{%- endfor -%}
+{%- for o in others %}
+{%- unless o.slug == page.slug or alt_urls contains o.url %}
+        <li><a href="{{ o.url }}">{{ o.app_name }}</a></li>
+{%- endunless %}
+{%- endfor %}
+      </ul>
+      <p>&copy; {{ site.time | date: '%Y' }} PrSeo7</p>
+    </div>
+  </footer>
+
+  <script>
+    // Store-link clicks, sent only after analytics consent (same event as the homepage)
+    document.querySelectorAll('a.store-btn').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.analyticsLoaded && typeof gtag !== 'undefined') {
+          gtag('event', 'External Link Click', { event_category: 'Navigation', event_label: this.href });
+        }
+      });
+    });
+  </script>
+{% include cookie-banner.html %}
+</body>
+
+</html>

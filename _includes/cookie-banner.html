@@ -1,0 +1,154 @@
+{%- assign CL = site.data.app_labels[page.lang] | default: site.data.app_labels.en -%}
+  <style>
+    /* Cookie Consent Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(51, 51, 51, 0.95);
+      color: white;
+      padding: 1rem 0;
+      z-index: 10000;
+      backdrop-filter: blur(10px);
+    }
+
+    .cookie-banner p {
+      margin: 0 0 1rem 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .cookie-banner a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+    }
+
+    .cookie-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .cookie-btn.accept {
+      background: #667eea;
+      color: white;
+    }
+
+    .cookie-btn.accept:hover {
+      background: #5a6fd8;
+    }
+
+    .cookie-btn.decline {
+      background: transparent;
+      color: #ccc;
+      border: 1px solid #ccc;
+    }
+
+    .cookie-btn.decline:hover {
+      background: #ccc;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .cookie-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cookie-btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent" class="cookie-banner" style="display: none;">
+    <div class="container">
+      <p>{{ CL.cookie_text }}</p>
+      <div class="cookie-buttons">
+        <button id="accept-cookies" class="cookie-btn accept">{{ CL.accept }}</button>
+        <button id="decline-cookies" class="cookie-btn decline">{{ CL.decline }}</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cookie Consent Management (needs window.loadAnalytics from _includes/analytics.html)
+    (function () {
+      'use strict';
+
+      function readConsent() {
+        try { return localStorage.getItem('cookie-consent'); } catch (e) { return null; }
+      }
+
+      function saveConsent(value) {
+        try { localStorage.setItem('cookie-consent', value); } catch (e) { }
+      }
+
+      function showCookieConsent(force) {
+        const banner = document.getElementById('cookie-consent');
+        if (banner && (force || !readConsent())) {
+          banner.style.display = 'block';
+        }
+      }
+
+      // Remove the _ga / _ga_<id> cookies set while consent was granted
+      function deleteAnalyticsCookies() {
+        const host = window.location.hostname;
+        document.cookie.split(';').forEach(function (c) {
+          const name = c.split('=')[0].trim();
+          if (name === '_ga' || name.indexOf('_ga_') === 0) {
+            [host, '.' + host].forEach(function (domain) {
+              document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + domain;
+            });
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+          }
+        });
+      }
+
+      function acceptCookies() {
+        saveConsent('accepted');
+        document.getElementById('cookie-consent').style.display = 'none';
+        window.loadAnalytics();
+      }
+
+      function declineCookies() {
+        saveConsent('declined');
+        document.getElementById('cookie-consent').style.display = 'none';
+
+        // Withdrawal after an earlier Accept: stop sending and remove the cookies
+        if (window.analyticsLoaded) {
+          gtag('consent', 'update', { analytics_storage: 'denied' });
+          window['ga-disable-' + window.GA_MEASUREMENT_ID] = true;
+          window.analyticsLoaded = false;
+        }
+        deleteAnalyticsCookies();
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const acceptBtn = document.getElementById('accept-cookies');
+        const declineBtn = document.getElementById('decline-cookies');
+        const settingsLink = document.getElementById('cookie-settings');
+
+        if (acceptBtn) acceptBtn.addEventListener('click', acceptCookies);
+        if (declineBtn) declineBtn.addEventListener('click', declineCookies);
+        if (settingsLink) settingsLink.addEventListener('click', function () {
+          showCookieConsent(true);
+        });
+
+        // Show banner if no consent given
+        setTimeout(showCookieConsent, 2000);
+      });
+    })();
+  </script>

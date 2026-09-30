@@ -3,9 +3,36 @@
      and <lastmod> to the date the page's content last changed.
      changefreq/priority are omitted: Google ignores both.
      neko_japanese/ is left out on purpose: the app is discontinued. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://prseo7.github.io/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/jlpt-vocab-master/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/easyvocab/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/easyvocab/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/easyvocab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/easyvocab/"/>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/ko/easyvocab/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/easyvocab/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/easyvocab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/easyvocab/"/>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/provocab/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/tabata-timer/</loc>
     <lastmod>2026-09-30</lastmod>
   </url>
   <url>

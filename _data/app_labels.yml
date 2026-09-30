@@ -1,0 +1,54 @@
+# UI strings for _layouts/app.html and _includes/cookie-banner.html, keyed by page.lang.
+# "%s" is replaced with the app name.
+en:
+  home: Home
+  apps: Apps
+  icon_alt: "%s app icon"
+  ios_cta: App Store
+  android_cta: Google Play
+  ios_aria: "Download %s on the App Store"
+  android_aria: "Download %s on Google Play"
+  screenshots: Screenshots
+  features: Features
+  how: How it works
+  premium: Free and Premium
+  free: Free
+  paid: Premium (one-time purchase)
+  faq: Frequently asked questions
+  last_updated: Last updated
+  app_privacy: "%s privacy policy"
+  site_privacy: Website privacy policy
+  cookie_settings: Cookie Settings
+  other_apps: Other apps by PrSeo7
+  app_store_id: App Store ID
+  ios_bundle: iOS bundle ID
+  android_package: Android package
+  cookie_text: 'With your permission, we use Google Analytics cookies to see how visitors use this site. Nothing is sent to Google unless you accept. See our <a href="/privacy-policy/">Privacy Policy</a>.'
+  accept: Accept
+  decline: Decline
+ko:
+  home: 홈
+  apps: 앱
+  icon_alt: "%s 앱 아이콘"
+  ios_cta: App Store
+  android_cta: Google Play
+  ios_aria: "App Store에서 %s 다운로드"
+  android_aria: "Google Play에서 %s 다운로드"
+  screenshots: 스크린샷
+  features: 주요 기능
+  how: 이렇게 공부해요
+  premium: 무료와 프리미엄
+  free: 무료
+  paid: 프리미엄 (1회 구매)
+  faq: 자주 묻는 질문
+  last_updated: 최종 업데이트
+  app_privacy: "%s 개인정보처리방침(영문)"
+  site_privacy: 웹사이트 개인정보처리방침
+  cookie_settings: 쿠키 설정
+  other_apps: PrSeo7의 다른 앱
+  app_store_id: App Store ID
+  ios_bundle: iOS 번들 ID
+  android_package: Android 패키지
+  cookie_text: '동의하시면 방문자가 이 사이트를 어떻게 이용하는지 알아보기 위해 Google Analytics 쿠키를 사용합니다. 동의하기 전에는 Google에 아무것도 전송되지 않습니다. 자세한 내용은 <a href="/privacy-policy/">개인정보처리방침</a>(영문)을 참고하세요.'
+  accept: 동의
+  decline: 거부
