@@ -1,0 +1,26 @@
+# GitHub Pages merges this file over its own defaults (primer theme, default
+# plugins), so it only sets what differs. Do not add `theme:` or `plugins:`
+# without re-checking the build.
+#
+# The policy .md files are copied verbatim from each app repo, so their meta
+# descriptions live here instead of in front matter. jekyll-seo-tag renders
+# `description` as <meta name="description"> and og:description.
+defaults:
+  - scope: { path: "easy_vocab" }
+    values:
+      description: "How the EasyVocab app handles your data: what it collects, why, who receives it, and the choices you have."
+  - scope: { path: "jlptn3word200" }
+    values:
+      description: "How the JLPT Vocab Master app handles your data: what it collects, why, who receives it, and the choices you have."
+  - scope: { path: "neko_japanese" }
+    values:
+      description: "How the Neko Japanese app handles your data: what it collects, why, who receives it, and the choices you have."
+  - scope: { path: "pro_vocab" }
+    values:
+      description: "How the ProVocab app handles your data: what it collects, why, who receives it, and the choices you have."
+  - scope: { path: "tabata_timer" }
+    values:
+      description: "How the Tabata Timer app handles your data: what it collects, why, who receives it, and the choices you have."
+  - scope: { path: "privacy-policy" }
+    values:
+      description: "How prseo7.github.io handles your data: Google Analytics runs only if you accept cookies, and you can change your choice."
