@@ -55,17 +55,43 @@
   <!-- Web App Manifest -->
   <link rel="manifest" href="/manifest.json">
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7Y10CF072"></script>
+  <!-- Google Analytics 4, basic Consent Mode: gtag.js is not loaded and nothing is
+       sent until the visitor accepts in the cookie banner. Keep /privacy-policy/ in
+       sync with what this block collects. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-G7Y10CF072', {
-      page_title: 'PrSeo7 - Software Development Services',
-      page_location: window.location.href,
-      send_page_view: true
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
     });
+
+    window.GA_MEASUREMENT_ID = 'G-G7Y10CF072';
+    window.loadAnalytics = function () {
+      if (window.analyticsLoaded) return;
+      window.analyticsLoaded = true;
+      window['ga-disable-' + window.GA_MEASUREMENT_ID] = false;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      // Re-accepting after a withdrawal on the same page: gtag.js is already loaded
+      if (window.analyticsScriptAdded) return;
+      window.analyticsScriptAdded = true;
+      gtag('js', new Date());
+      gtag('config', window.GA_MEASUREMENT_ID, {
+        page_title: 'PrSeo7 - Software Development Services',
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+      document.head.appendChild(s);
+    };
+
+    try {
+      if (localStorage.getItem('cookie-consent') === 'accepted') window.loadAnalytics();
+    } catch (e) { }
   </script>
 
   <!-- Resource Hints for Performance -->
@@ -240,6 +266,11 @@
       margin: 0 0 1rem 0;
       font-size: 0.9rem;
       line-height: 1.4;
+    }
+
+    .cookie-banner a {
+      color: white;
+      text-decoration: underline;
     }
 
     .cookie-buttons {
@@ -682,14 +713,24 @@
       margin-top: 1rem;
     }
 
-    .footer-links a {
+    .footer-links a,
+    .footer-links button {
       color: #ccc;
       text-decoration: none;
       margin: 0 1rem;
       transition: color 0.3s ease;
     }
 
-    .footer-links a:hover {
+    .footer-links button {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .footer-links a:hover,
+    .footer-links button:hover {
       color: #667eea;
     }
 
@@ -926,8 +967,8 @@
   <!-- Cookie Consent Banner -->
   <div id="cookie-consent" class="cookie-banner" style="display: none;">
     <div class="container">
-      <p>This website uses cookies to analyze traffic and improve your experience. By continuing to use this site, you
-        consent to our use of cookies.</p>
+      <p>With your permission, we use Google Analytics cookies to see how visitors use this site. Nothing is sent to
+        Google unless you accept. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
       <div class="cookie-buttons">
         <button id="accept-cookies" class="cookie-btn accept">Accept</button>
         <button id="decline-cookies" class="cookie-btn decline">Decline</button>
@@ -941,8 +982,8 @@
       <div class="footer-bottom">
         <p>&copy; 2025 PrSeo7. All rights reserved.</p>
         <div class="footer-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <button type="button" id="cookie-settings">Cookie Settings</button>
           <a href="/sitemap.xml">Sitemap</a>
         </div>
       </div>
@@ -1034,7 +1075,7 @@
 
       // Google Analytics Enhanced Tracking
       function trackEvent(category, action, label) {
-        if (typeof gtag !== 'undefined') {
+        if (window.analyticsLoaded && typeof gtag !== 'undefined') {
           gtag('event', action, {
             event_category: category,
             event_label: label
@@ -1076,7 +1117,7 @@
               const domContentLoaded = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
 
               // Track Core Web Vitals
-              if (typeof gtag !== 'undefined') {
+              if (window.analyticsLoaded && typeof gtag !== 'undefined') {
                 gtag('event', 'timing_complete', {
                   name: 'load',
                   value: Math.round(loadTime),
@@ -1095,50 +1136,65 @@
       }
 
       // Cookie Consent Management
-      function showCookieConsent() {
+      function readConsent() {
+        try { return localStorage.getItem('cookie-consent'); } catch (e) { return null; }
+      }
+
+      function saveConsent(value) {
+        try { localStorage.setItem('cookie-consent', value); } catch (e) { }
+      }
+
+      function showCookieConsent(force) {
         const banner = document.getElementById('cookie-consent');
-        if (banner && !localStorage.getItem('cookie-consent')) {
+        if (banner && (force || !readConsent())) {
           banner.style.display = 'block';
         }
       }
 
+      // Remove the _ga / _ga_<id> cookies set while consent was granted
+      function deleteAnalyticsCookies() {
+        const host = window.location.hostname;
+        document.cookie.split(';').forEach(function (c) {
+          const name = c.split('=')[0].trim();
+          if (name === '_ga' || name.indexOf('_ga_') === 0) {
+            [host, '.' + host].forEach(function (domain) {
+              document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + domain;
+            });
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+          }
+        });
+      }
+
       function acceptCookies() {
-        localStorage.setItem('cookie-consent', 'accepted');
+        saveConsent('accepted');
         document.getElementById('cookie-consent').style.display = 'none';
-
-        // Enable Google Analytics
-        if (typeof gtag !== 'undefined') {
-          gtag('consent', 'update', {
-            'analytics_storage': 'granted'
-          });
-        }
-
-        // Track consent
-        trackEvent('Privacy', 'Cookie Consent', 'Accepted');
+        window.loadAnalytics();
       }
 
       function declineCookies() {
-        localStorage.setItem('cookie-consent', 'declined');
+        saveConsent('declined');
         document.getElementById('cookie-consent').style.display = 'none';
 
-        // Disable Google Analytics
-        if (typeof gtag !== 'undefined') {
-          gtag('consent', 'update', {
-            'analytics_storage': 'denied'
-          });
+        // Withdrawal after an earlier Accept: stop sending and remove the cookies
+        if (window.analyticsLoaded) {
+          gtag('consent', 'update', { analytics_storage: 'denied' });
+          window['ga-disable-' + window.GA_MEASUREMENT_ID] = true;
+          window.analyticsLoaded = false;
         }
-
-        // Track consent
-        trackEvent('Privacy', 'Cookie Consent', 'Declined');
+        deleteAnalyticsCookies();
       }
 
       // Initialize cookie consent
       document.addEventListener('DOMContentLoaded', function () {
         const acceptBtn = document.getElementById('accept-cookies');
         const declineBtn = document.getElementById('decline-cookies');
+        const settingsLink = document.getElementById('cookie-settings');
 
         if (acceptBtn) acceptBtn.addEventListener('click', acceptCookies);
         if (declineBtn) declineBtn.addEventListener('click', declineCookies);
+        if (settingsLink) settingsLink.addEventListener('click', function () {
+          showCookieConsent(true);
+        });
 
         // Show banner if no consent given
         setTimeout(showCookieConsent, 2000);
