@@ -13,6 +13,9 @@
 {%- assign downloads = "" | split: "" -%}
 {%- if page.stores.ios -%}{%- assign downloads = downloads | push: page.stores.ios -%}{%- endif -%}
 {%- if page.stores.android -%}{%- assign downloads = downloads | push: page.stores.android -%}{%- endif -%}
+{%- comment -%} sameAs = store listings + this app's page in the other language(s), so the en and ko nodes read as one app. {%- endcomment -%}
+{%- assign same_as = downloads -%}
+{%- for alt in page.alternate -%}{%- unless alt[1] == page.url -%}{%- assign alt_url = site_url | append: alt[1] -%}{%- assign same_as = same_as | push: alt_url -%}{%- endunless -%}{%- endfor -%}
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 
@@ -77,7 +80,20 @@
         "applicationCategory": {{ page.category | jsonify }},
         "inLanguage": {{ page.app_languages | jsonify }},
         "downloadUrl": {{ downloads | jsonify }},
-        "sameAs": {{ downloads | jsonify }},
+        "sameAs": {{ same_as | jsonify }},
+{%- if page.identifiers %}
+        "identifier": [
+{%- if page.identifiers.app_store_id %}
+          { "@type": "PropertyValue", "propertyID": "Apple App Store ID", "value": {{ page.identifiers.app_store_id | jsonify }} }{% if page.identifiers.ios_bundle or page.identifiers.android_package %},{% endif %}
+{%- endif %}
+{%- if page.identifiers.ios_bundle %}
+          { "@type": "PropertyValue", "propertyID": "iOS bundle ID", "value": {{ page.identifiers.ios_bundle | jsonify }} }{% if page.identifiers.android_package %},{% endif %}
+{%- endif %}
+{%- if page.identifiers.android_package %}
+          { "@type": "PropertyValue", "propertyID": "Android package name", "value": {{ page.identifiers.android_package | jsonify }} }
+{%- endif %}
+        ],
+{%- endif %}
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "author": { "@id": "{{ site_url }}/#organization" },
         "publisher": { "@id": "{{ site_url }}/#organization" }
