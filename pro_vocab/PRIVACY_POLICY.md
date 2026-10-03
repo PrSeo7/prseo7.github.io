@@ -1,6 +1,6 @@
 # Privacy Policy for ProVocab
 
-**Last Updated:** September 29, 2026
+**Last Updated:** October 2, 2026
 
 ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer. This page explains what data the App handles, why, and what you can do about it. PrSeo7 is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
@@ -26,8 +26,8 @@ ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer.
 - Crash logs and stack traces, errors reported by the app framework, the device state at the time, and an installation identifier used to count affected devices
 
 **Advertising (Unity Ads, ironSource Ads and Meta Audience Network, through Unity LevelPlay; free version only)**
-- The device advertising ID (on iOS only if you allowed tracking for the App; on Android according to your device's ad settings), your IP address (Unity may estimate an approximate location from it), device information, which ads were shown or tapped, and diagnostic data about the ad software. Meta Audience Network runs on iOS only
-- Advertising data is collected only while ads are shown, never for Premium users, and starting from the first screen that shows an ad, not at launch
+- The device advertising ID (on iOS only if you allowed tracking for the App; on Android according to your device's ad settings, and Unity chooses ads without it if you chose non-personalized ads), your IP address (Unity may estimate an approximate location from it), device information, which ads were shown or tapped, and diagnostic data about the ad software. This applies on both iOS and Android
+- Advertising data is collected only while ads are shown, never for Premium users, and starting from the first screen that shows an ad, not at launch. On Android, copies of the App running on Google Play's pre-launch test devices or installed from outside the Play Store show no ads
 - On iOS, ad-driven installs may be attributed through Apple's SKAdNetwork, which does not identify you
 
 **Fonts**
@@ -40,7 +40,7 @@ ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer.
 - The Premium purchase is processed by Apple or Google Play. We never see your payment details; the App only learns whether Premium is owned. The App may also ask the store to show its standard rating prompt
 
 **Reminders**
-- If you turn on the daily reminder, the App schedules one local notification per day on your device at the time you choose. There is no push server and nothing is sent anywhere. Notification permission is requested only when you turn reminders on
+- If you turn on the daily reminder, the App schedules one local notification per day on your device at about the time you choose. There is no push server and nothing is sent anywhere. Notification permission is requested only when you turn reminders on
 
 ## Why, and on what legal basis
 
@@ -48,7 +48,7 @@ ProVocab is a vocabulary flashcard app made by PrSeo7, an independent developer.
 |---|---|---|
 | Learning data on your device | Provide the App | Not processed by us |
 | Analytics and crash reports | Understand usage, fix crashes | Legitimate interests (GDPR Art. 6(1)(f)) |
-| Personalized ads (free version) | Fund the free version | Your consent (Art. 6(1)(a)), given in the iOS tracking prompt (iOS) or the App's consent sheet (Android) |
+| Personalized ads (free version) | Fund the free version | Your consent (Art. 6(1)(a)), given in the iOS tracking prompt (iOS) or the App's consent sheet (Android; there it applies to Unity's networks, because on Android Meta Audience Network does not serve ads in the EEA, the UK and Switzerland) |
 | Ads in general (free version) | Fund the free version | Legitimate interests (Art. 6(1)(f)) |
 | Font download | Display the App's text | Legitimate interests (Art. 6(1)(f)) |
 | Premium purchase | Unlock Premium, restore it later | Contract (Art. 6(1)(b)) |
@@ -60,17 +60,18 @@ We make no decisions about you based solely on automated processing that have le
 Only these companies receive data from the App, each bound to protect it at least as well as this policy says:
 - **Google LLC** (Firebase Analytics, Firebase Crashlytics, Google Fonts): https://policies.google.com/privacy and https://firebase.google.com/support/privacy
 - **Unity Technologies** (Unity Ads, ironSource Ads, Unity LevelPlay; free version only), which decides itself how it uses advertising data and may share it with its affiliates and ad partners as its policy describes: https://unity.com/legal/game-player-and-app-user-privacy-policy
-- **Meta** (Meta Audience Network, through Unity LevelPlay; free version on iOS only): Meta Platforms Ireland Limited for users in the EU/EEA and Meta Platforms, Inc. elsewhere, including the UK, each a data controller of the data it receives. Meta decides itself how it uses advertising data and may combine it with what it knows about Facebook and Instagram users to personalize ads (on iOS it receives the advertising ID only if you allow tracking): https://www.facebook.com/privacy/policy/
+- **Meta** (Meta Audience Network, through Unity LevelPlay; free version): Meta Platforms Ireland Limited for users in the EU/EEA and Meta Platforms, Inc. elsewhere, including the UK, each a data controller of the data it receives. On Android, Meta Audience Network does not serve ads to users in the EEA, the UK and Switzerland. Meta decides itself how it uses advertising data and may combine it with what it knows about Facebook and Instagram users to personalize ads (on iOS it receives the advertising ID only if you allow tracking; on Android according to your device's ad settings): https://www.facebook.com/privacy/policy/
 - **Apple** and **Google Play** for the Premium purchase and the store rating prompt: https://www.apple.com/legal/privacy/ and https://policies.google.com/privacy
 
 Google, Unity and Meta process this data in the United States and other countries. For users in the EEA, the UK and Switzerland, Google relies on the EU-U.S. Data Privacy Framework and the EU Standard Contractual Clauses (https://policies.google.com/privacy/frameworks); Unity relies on the Standard Contractual Clauses and on adequacy decisions; Meta relies on the EU-U.S. and Swiss-U.S. Data Privacy Frameworks (https://www.facebook.com/privacy/policies/data_privacy_framework/) and the Standard Contractual Clauses, with the UK addendum for the UK (https://www.facebook.com/legal/terms/uk_data_transfer_addendum_audience_network). No data is transferred to us.
 
 ## Your choices
 
-- **Ad consent (everyone):** before the first ad, the App asks how ads are chosen. On iOS, an information screen with a "Continue" button is followed by the iOS tracking prompt (unless you already answered the iOS tracking prompt): "Allow" means personalized ads, "Ask App Not to Track" means non-personalized ads; change it at any time in iOS Settings > ProVocab > "Allow Tracking" (the App's Settings > Privacy > "Ad Privacy Settings" shows the current state, "Personalized ads: allowed" or "Personalized ads: not allowed", and an "Open Settings" button that links there). On Android, the App asks you to choose between "Personalized ads" and "Non-personalized ads"; change it under Settings > Privacy > "Ad Privacy Settings"
+- **Ad consent (everyone):** before the first ad, the App asks how ads are chosen. On iOS, an information screen with a "Continue" button is followed by the iOS tracking prompt (unless you already answered the iOS tracking prompt): "Allow" means personalized ads, "Ask App Not to Track" means non-personalized ads; change it at any time in iOS Settings > ProVocab > "Allow Tracking" (the App's Settings > Privacy > "Ad Privacy Settings" shows the current state, "Personalized ads: allowed" or "Personalized ads: not allowed", and an "Open Settings" button that links there). On Android, a sheet titled "Ads in the free version" asks you to choose between "Personalized ads" and "Non-personalized ads"; change it under Settings > Privacy > "Ad Privacy Settings". Your answer is passed to Unity's networks (Unity Ads, ironSource Ads)
 - **Meta (iOS):** Meta follows your iOS tracking permission, which its software reads itself on iOS 17 and later; on earlier iOS versions the App does not tell Meta that tracking is allowed, so Meta treats you as not tracked
+- **Meta (Android):** Meta Audience Network does not serve ads to users in the EEA, the UK and Switzerland. Elsewhere the App does not pass your answer to Meta, and Android has no tracking prompt, so Meta follows only your device's ad settings (below). The App tells Meta only that it is not directed to children
 - **Inside an ad:** Unity's Data Privacy icon lets you opt out of personalized ads with Unity directly; Meta's ads carry Meta's ad-options (AdChoices) icon
-- **Android:** Settings > Google > Ads lets you delete your advertising ID or opt out of ad personalization
+- **Android:** your device's ad settings (for example Settings > Google > Ads) let you delete your advertising ID or opt out of ad personalization; this is the setting Meta follows
 - **Premium:** removes ads and all advertising data collection
 - **Uninstall:** deletes everything stored on your device and stops all collection
 - Usage analytics cannot be switched off inside the App; it contains no advertising identifier unless you allowed tracking, and it is not used for advertising
@@ -92,7 +93,7 @@ We cannot delete individual analytics or crash records on request: the App has n
 
 **EEA, UK and Switzerland (GDPR):** you have the rights of access, rectification, erasure, restriction, portability, objection, and to withdraw consent at any time. For the analytics and crash data we cannot identify you, so access, rectification, erasure and portability cannot be fulfilled for it (GDPR Article 11); you can still withdraw ad consent (in iOS Settings, or in the App on Android), stop all processing by uninstalling, and exercise rights over advertising data through Unity (https://unity.com/legal/game-player-and-app-user-privacy-policy) or Meta (https://www.facebook.com/privacy/policy/). You may lodge a complaint with your data protection authority (EU list: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en; UK: https://ico.org.uk; Switzerland: https://www.edoeb.admin.ch). We would appreciate the chance to help first.
 
-**California:** we do not sell personal information. If passing the advertising identifier to Unity or Meta for personalized ads counts as "sharing", you can opt out by not allowing tracking on iOS (or choosing "Non-personalized ads" on Android), by buying Premium, or by uninstalling the App. You may also ask to know, correct or delete personal information and will not be discriminated against for asking; the same identification limit applies. Contact us by e-mail.
+**California:** we do not sell personal information. If passing the advertising identifier to Unity or Meta for personalized ads counts as "sharing", you can opt out by not allowing tracking on iOS; on Android by choosing "Non-personalized ads" (for Unity) and deleting your advertising ID or opting out in your device's ad settings, for example Settings > Google > Ads (for Meta); by buying Premium; or by uninstalling the App. You may also ask to know, correct or delete personal information and will not be discriminated against for asking; the same identification limit applies. Contact us by e-mail.
 
 ## Children
 
@@ -117,6 +118,7 @@ This page describes what happens when you use the App; it is not a request for c
 
 ## Change history
 
+- **October 2, 2026:** ProVocab is now also available on Google Play. On Android, ads come from the same networks as on iOS (Unity Ads, ironSource Ads and Meta Audience Network, through Unity LevelPlay). The App's consent sheet now names Meta; your answer reaches Unity, while Meta follows your device's ad settings. On Android, Meta Audience Network does not serve ads in the EEA, the UK and Switzerland. Copies on Google Play's pre-launch test devices or installed from outside the Play Store show no ads. Nothing else changed about what is collected.
 - **September 29, 2026:** Meta Audience Network (operated by Meta) can now fill ad requests in the free version, through Unity LevelPlay. On iOS it follows your tracking permission, like Unity. Recipients, retention and transfers updated. Nothing else changed about what is collected.
 - **September 26, 2026:** On iOS the tracking prompt is now the ad-consent question, preceded by an information screen with a "Continue" button; change it in the iOS Settings app. Android is unchanged. Nothing changed about what is collected.
 - **September 24, 2026:** Ads are now served by Unity's networks Unity Ads and ironSource Ads (mediated by Unity LevelPlay) instead of Google AdMob. The ad-consent question is asked by the App itself, to every user of the free version, before the first ad; the iOS tracking prompt appears only if you choose personalized ads. Recipients, retention and transfers updated for Unity. Nothing else changed about what is collected.
