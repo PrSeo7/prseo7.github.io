@@ -1,6 +1,6 @@
 # Privacy Policy for EasyVocab
 
-**Last Updated:** September 9, 2026
+**Last Updated:** October 4, 2026
 
 EasyVocab is a vocabulary flashcard app made by PrSeo7, an independent developer. This page explains what data the App handles, why, and what you can do about it. PrSeo7 is the data controller for the processing described here; contact: hello.prseo7@gmail.com.
 
@@ -8,7 +8,7 @@ EasyVocab is a vocabulary flashcard app made by PrSeo7, an independent developer
 
 - The App has **no user accounts**. It never asks for your name, e-mail address or any other personal detail.
 - Your learning progress and settings stay **on your device**. We run no server and receive no copy of them.
-- The App uses Google's Firebase for usage analytics and crash reports, and Google AdMob for ads in the **free version only**. That data goes from your device straight to Google.
+- The App uses Google's Firebase for usage analytics and crash reports, and, for ads in the **free version only**, Unity's ad networks Unity Ads and ironSource Ads plus Meta Audience Network, all through Unity LevelPlay. Analytics and crash data go from your device straight to Google; advertising data goes straight to Unity and Meta.
 - Because we hold no identifier for you, **we cannot look up or delete an individual's analytics or crash records**. They expire automatically, and uninstalling the App stops all collection.
 - Buying Premium (a one-time purchase, no subscription) removes ads and all advertising data collection.
 
@@ -17,30 +17,30 @@ EasyVocab is a vocabulary flashcard app made by PrSeo7, an independent developer
 **Usage analytics (Firebase Analytics, all users)**
 - Device model and operating system version
 - A Firebase installation identifier that Google assigns to this installation (it changes if you reinstall); on iOS also Apple's identifier for vendors (IDFV), which is shared by all PrSeo7 apps on your device
-- How you use the App: features used, learning and review actions (for example marking a word as learned, or the result of a review), and purchase or restore events, including the price, the currency and the store's transaction number for the Premium purchase
+- How you use the App: review sessions and each review result (whether you remembered or forgot a word), study-streak milestones, theme changes, opening the study calendar (with the number of days you have studied), taps on the "More by PrSeo7" links, when the App asks the store to show its rating prompt, whether banner ads loaded and were shown (free version), and purchase or restore events, including the price, the currency and the store's transaction number for the Premium purchase
 - Your premium status and app theme
 - Approximate location at country/region level, which Google derives from a masked IP address. This applies to all users, including Premium. The App requests no location permission and never uses your device's location services
-- Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you allow tracking in the system prompt
+- Firebase Analytics does not collect the Android advertising ID. On iOS the advertising identifier is available to Google only if you allowed tracking in the iOS tracking prompt
 
 **Crash reports (Firebase Crashlytics, all users)**
-- Crash logs and stack traces, the device state at the time of the crash, and an installation identifier used to count affected devices
+- Crash logs and stack traces, errors reported by the app framework, the device state at the time, and an installation identifier used to count affected devices
 
-**Advertising (Google AdMob, free version only)**
-- The device advertising ID (on iOS only if you allow tracking; on Android according to your device's ad settings), your IP address (Google may estimate a city-level location from it), device information, and which ads were shown or tapped
-- Advertising data is collected only while ads are shown, never for Premium users, and starting from the first screen that shows an ad, not at launch
+**Advertising (Unity Ads, ironSource Ads and Meta Audience Network, through Unity LevelPlay; free version only)**
+- The device advertising ID (on iOS only if you allowed tracking for the App; on Android according to your device's ad settings, and Unity chooses ads without it if you chose non-personalized ads), your IP address (Unity may estimate an approximate location from it), device information, which ads were shown or tapped, and diagnostic data about the ad software. This applies on both iOS and Android
+- Advertising data is collected only while ads are shown, never for Premium users, and starting from the first screen that shows an ad, not at launch. On Android, copies of the App running on Google Play's pre-launch test devices or installed from outside the Play Store show no ads
 - On iOS, ad-driven installs may be attributed through Apple's SKAdNetwork, which does not identify you
 
 **Fonts**
 - The App downloads its display fonts from Google Fonts the first time they are needed, so your IP address reaches Google's font servers
 
 **On your device only**
-- Words you mark as learned, your review schedule, streaks, starred words, and your language, theme, reminder and daily-goal settings. This data is stored in the App's own storage on your device; it is included in your device's normal system backups (iCloud or Google backup) if you have those turned on. "Export Progress" writes it to a file that you choose where to send; "Import Progress" reads such a file back. Backups contain only learning progress, no identifiers
+- Words you mark as learned, your review schedule, streaks, starred words, your language, theme, reminder and daily-goal settings, and your ad choice. This data is stored in the App's own storage on your device; it is included in your device's normal system backups (iCloud or Google backup) if you have those turned on. "Export Progress" writes your learning progress to a file that you choose where to send; "Import Progress" reads such a file back and merges it into your progress. Backups contain only learning progress, no identifiers
 
 **Purchases**
-- The Premium purchase is processed by Apple or Google Play. We never see your payment details; the App only learns whether Premium is owned
+- The Premium purchase is processed by Apple or Google Play. We never see your payment details; the App only learns whether Premium is owned. The App may also ask the store to show its standard rating prompt
 
 **Reminders**
-- If you turn on the daily reminder, the App schedules one local notification per day on your device at the time you choose. There is no push server and nothing is sent anywhere. Notification permission is requested only when you turn reminders on
+- If you turn on the daily reminder, the App schedules one local notification per day on your device around the time you choose. There is no push server and nothing is sent anywhere. Notification permission is requested only when you turn reminders on
 
 ## Why, and on what legal basis
 
@@ -48,8 +48,9 @@ EasyVocab is a vocabulary flashcard app made by PrSeo7, an independent developer
 |---|---|---|
 | Learning data on your device | Provide the App | Not processed by us |
 | Analytics and crash reports | Understand usage, fix crashes | Legitimate interests (GDPR Art. 6(1)(f)) |
-| Personalized ads (free version) | Fund the free version | Your consent (Art. 6(1)(a)), given in the consent form |
+| Personalized ads (free version) | Fund the free version | Your consent (Art. 6(1)(a)), given in the iOS tracking prompt (iOS) or the App's consent sheet (Android; there it applies to Unity's networks, because on Android Meta Audience Network does not serve ads in the EEA, the UK and Switzerland) |
 | Ads in general (free version) | Fund the free version | Legitimate interests (Art. 6(1)(f)) |
+| Font download | Display the App's text | Legitimate interests (Art. 6(1)(f)) |
 | Premium purchase | Unlock Premium, restore it later | Contract (Art. 6(1)(b)) |
 
 We make no decisions about you based solely on automated processing that have legal or similarly significant effects. Nothing here is required by law or contract; if you do not want this processing, use Premium (no advertising data) or uninstall the App (no collection at all).
@@ -57,26 +58,32 @@ We make no decisions about you based solely on automated processing that have le
 ## Who receives data
 
 Only these companies receive data from the App, each bound to protect it at least as well as this policy says:
-- **Google LLC** (Firebase Analytics, Firebase Crashlytics, AdMob, Google Fonts): https://policies.google.com/privacy and https://firebase.google.com/support/privacy
-- **Apple** and **Google Play** for the Premium purchase: https://www.apple.com/legal/privacy/ and https://policies.google.com/privacy
+- **Google LLC** (Firebase Analytics, Firebase Crashlytics, Google Fonts): https://policies.google.com/privacy and https://firebase.google.com/support/privacy
+- **Unity Technologies** (Unity Ads, ironSource Ads, Unity LevelPlay; free version only), which decides itself how it uses advertising data and may share it with its affiliates and ad partners as its policy describes: https://unity.com/legal/game-player-and-app-user-privacy-policy
+- **Meta** (Meta Audience Network, through Unity LevelPlay; free version): Meta Platforms Ireland Limited for users in the EU/EEA and Meta Platforms, Inc. elsewhere, including the UK, each a data controller of the data it receives. On Android, Meta Audience Network does not serve ads to users in the EEA, the UK and Switzerland. Meta decides itself how it uses advertising data and may combine it with what it knows about Facebook and Instagram users to personalize ads (on iOS it receives the advertising ID only if you allow tracking; on Android according to your device's ad settings): https://www.facebook.com/privacy/policy/
+- **Apple** and **Google Play** for the Premium purchase and the store rating prompt: https://www.apple.com/legal/privacy/ and https://policies.google.com/privacy
 
-Google processes this data in the United States and other countries. For users in the EEA, the UK and Switzerland, Google relies on the EU-U.S. Data Privacy Framework and the EU Standard Contractual Clauses (https://policies.google.com/privacy/frameworks). No data is transferred to us.
+Google, Unity and Meta process this data in the United States and other countries. For users in the EEA, the UK and Switzerland, Google relies on the EU-U.S. Data Privacy Framework and the EU Standard Contractual Clauses (https://policies.google.com/privacy/frameworks); Unity relies on the Standard Contractual Clauses and on adequacy decisions; Meta relies on the EU-U.S. and Swiss-U.S. Data Privacy Frameworks (https://www.facebook.com/privacy/policies/data_privacy_framework/) and the Standard Contractual Clauses, with the UK addendum for the UK (https://www.facebook.com/legal/terms/uk_data_transfer_addendum_audience_network). No data is transferred to us.
 
 ## Your choices
 
-- **Ad consent (EEA, UK, Switzerland):** before the first ad, the App shows Google's consent form. Change or withdraw your choice at any time in the App under Settings > Privacy > "Ad Privacy Settings"
-- **iOS tracking:** before the first ad, iOS asks whether the App may track you. Choose "Ask App Not to Track" to keep your advertising identifier from Google. You can change this later in iOS Settings > Privacy & Security > Tracking
-- **Android:** Settings > Google > Ads lets you delete your advertising ID or opt out of ad personalization
+- **Ad consent (everyone):** before the first ad, the App asks how ads are chosen. On iOS, an information screen with a "Continue" button is followed by the iOS tracking prompt (unless you already answered the iOS tracking prompt): "Allow" means personalized ads, "Ask App Not to Track" means non-personalized ads; change it at any time in iOS Settings > EasyVocab > "Allow Tracking" (the App's Settings > Privacy > "Ad Privacy Settings" shows the current state, "Personalized ads: allowed" or "Personalized ads: not allowed", and an "Open Settings" button that links there). On Android, a sheet titled "Ads in the free version" asks you to choose between "Personalized ads" and "Non-personalized ads"; change it under Settings > Privacy > "Ad Privacy Settings". Your answer is passed to Unity's networks (Unity Ads, ironSource Ads)
+- **Meta (iOS):** Meta follows your iOS tracking permission, which its software reads itself on iOS 17 and later; on earlier iOS versions the App does not tell Meta that tracking is allowed, so Meta treats you as not tracked
+- **Meta (Android):** Meta Audience Network does not serve ads to users in the EEA, the UK and Switzerland. Elsewhere the App does not pass your answer to Meta, and Android has no tracking prompt, so Meta follows only your device's ad settings (below). The App tells Meta only that it is not directed to children
+- **Inside an ad:** Unity's Data Privacy icon lets you opt out of personalized ads with Unity directly; Meta's ads carry Meta's ad-options (AdChoices) icon
+- **Android:** your device's ad settings (for example Settings > Google > Ads) let you delete your advertising ID or opt out of ad personalization; this is the setting Meta follows
 - **Premium:** removes ads and all advertising data collection
 - **Uninstall:** deletes everything stored on your device and stops all collection
-- Usage analytics cannot be switched off inside the App; it contains no advertising identifier and is not used for advertising
+- Usage analytics cannot be switched off inside the App; it contains no advertising identifier unless you allowed tracking, and it is not used for advertising
 
 ## How long data is kept
 
 - On-device data: until you uninstall the App
 - Firebase Analytics: up to 14 months, then deleted automatically
 - Firebase Crashlytics: 90 days, then deleted automatically
-- AdMob: under Google's advertising retention rules (IP addresses in ad logs anonymized after 9 months, identifiers after 18 months; https://policies.google.com/technologies/retention)
+- Unity Ads: app interaction data tied to an installation identifier up to 12 months; transaction records up to 180 days; other advertising data for as long as Unity needs it for the purposes in its policy (https://unity.com/legal/game-player-and-app-user-privacy-policy)
+- Meta Audience Network: as long as Meta needs it to provide its products, comply with legal obligations or protect its or others' interests, decided case by case by the purpose and the feature; Meta names no fixed period (https://www.facebook.com/privacy/policy/, "How long do we keep your information?")
+- Ad data collected by Google AdMob in versions before 2.9.0: under Google's advertising retention rules (IP addresses in ad logs anonymized after 9 months, identifiers after 18 months; https://policies.google.com/technologies/retention)
 
 We cannot delete individual analytics or crash records on request: the App has no accounts, so we have no way to find the records that belong to you. That data is not linked to your identity and expires as listed above.
 
@@ -84,9 +91,9 @@ We cannot delete individual analytics or crash records on request: the App has n
 
 **Everyone:** ask us what the App collects (this page is the complete answer), opt out of personalized ads as described above, and delete your on-device data by uninstalling.
 
-**EEA, UK and Switzerland (GDPR):** you have the rights of access, rectification, erasure, restriction, portability, objection, and to withdraw consent at any time. For the analytics and crash data we cannot identify you, so access, rectification, erasure and portability cannot be fulfilled for it (GDPR Article 11); you can still withdraw ad consent in the App, stop all processing by uninstalling, and exercise rights over advertising data through Google (https://myadcenter.google.com). You may lodge a complaint with your data protection authority (EU list: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en; UK: https://ico.org.uk; Switzerland: https://www.edoeb.admin.ch). We would appreciate the chance to help first.
+**EEA, UK and Switzerland (GDPR):** you have the rights of access, rectification, erasure, restriction, portability, objection, and to withdraw consent at any time. For the analytics and crash data we cannot identify you, so access, rectification, erasure and portability cannot be fulfilled for it (GDPR Article 11); you can still withdraw ad consent (in iOS Settings, or in the App on Android), stop all processing by uninstalling, and exercise rights over advertising data through Unity (https://unity.com/legal/game-player-and-app-user-privacy-policy) or Meta (https://www.facebook.com/privacy/policy/). You may lodge a complaint with your data protection authority (EU list: https://www.edpb.europa.eu/about-edpb/about-edpb/members_en; UK: https://ico.org.uk; Switzerland: https://www.edoeb.admin.ch). We would appreciate the chance to help first.
 
-**California:** we do not sell personal information. If passing the advertising identifier to Google for personalized ads counts as "sharing", you can opt out with any of the choices above. You may also ask to know, correct or delete personal information and will not be discriminated against for asking; the same identification limit applies. Contact us by e-mail.
+**California:** we do not sell personal information. If passing the advertising identifier to Unity or Meta for personalized ads counts as "sharing", you can opt out by not allowing tracking on iOS; on Android by choosing "Non-personalized ads" (for Unity) and deleting your advertising ID or opting out in your device's ad settings, for example Settings > Google > Ads (for Meta); by buying Premium; or by uninstalling the App. You may also ask to know, correct or delete personal information and will not be discriminated against for asking; the same identification limit applies. Contact us by e-mail.
 
 ## Children
 
@@ -98,11 +105,11 @@ Premium is a one-time, non-consumable purchase: no subscription, no trial, no re
 
 ## Security
 
-Data sent to Google travels over HTTPS/TLS. On-device data is protected by your device's own security.
+Data sent to Google, Unity and Meta travels over HTTPS/TLS. On-device data is protected by your device's own security.
 
 ## About this policy
 
-This page describes what happens when you use the App; it is not a request for consent, and using the App is not treated as consent. Where consent is required (personalized ads in the EEA, UK and Switzerland; tracking on iOS), the App asks you separately and you can withdraw at any time. We may update this page; the date at the top changes when we do.
+This page describes what happens when you use the App; it is not a request for consent, and using the App is not treated as consent. Where consent is needed (personalized ads, asked of everyone using the free version; tracking on iOS), the App asks you separately and you can withdraw at any time. We may update this page; the date at the top changes when we do.
 
 ## Contact
 
@@ -111,6 +118,8 @@ This page describes what happens when you use the App; it is not a request for c
 
 ## Change history
 
+- **October 4, 2026:** Usage analytics now also records whether banner ads loaded and were shown (free version). Nothing else changed about what is collected. On Android the daily reminder now arrives around, rather than exactly at, the chosen time, and no alarm permission is requested
+- **October 3, 2026:** Ads are now served by Unity's networks Unity Ads and ironSource Ads and by Meta Audience Network, mediated by Unity LevelPlay, instead of Google AdMob. Before the first ad the App asks every user of the free version: on iOS an information screen followed by the iOS tracking prompt, on Android a choice between personalized and non-personalized ads. On Android, Meta Audience Network does not serve ads in the EEA, the UK and Switzerland. Nothing else changed about what is collected. The list of usage data now matches what the App actually sends (marking a word as learned removed, as the App does not report it; review results, streaks, the study calendar, "More by PrSeo7" taps and rating requests added), and a legal basis for the font download is stated
 - **September 9, 2026:** The purchase event sent to Firebase Analytics now includes the store's transaction number, so a single purchase cannot be counted twice. Nothing else changed about what is collected
 - **September 4, 2026:** Rewritten in plain language. Same-day corrections: no deletion-on-request claim; IP-based approximate location applies to all users; Premium is a one-time purchase; analytics identifier described as Firebase installation ID plus iOS IDFV; purchase price/currency to analytics, Google Fonts downloads and system backups disclosed; legal bases, complaint right, controller and transfer details added; "use = consent" clause removed
 - **July 26, 2026:** Advertising consent (UMP/ATT), reminders, one-time purchase
