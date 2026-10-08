@@ -35,8 +35,11 @@ icon jlpt-vocab-master jlpt_n3_words
 icon easyvocab hello_english
 icon provocab pro_vocab
 icon tabata-timer tabata_timer
-icon easyvocab-ko hello_english   # the Korean page's own image dir
+icon easyvocab-ko hello_english   # the Korean pages' own image dirs
+icon jlpt-vocab-master-ko jlpt_n3_words
+icon provocab-ko pro_vocab
+icon tabata-timer-ko tabata_timer
 
-for slug in jlpt-vocab-master easyvocab easyvocab-ko provocab tabata-timer; do
+for slug in jlpt-vocab-master jlpt-vocab-master-ko easyvocab easyvocab-ko provocab provocab-ko tabata-timer tabata-timer-ko; do
   screenshots "$slug"
 done

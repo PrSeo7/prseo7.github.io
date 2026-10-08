@@ -12,6 +12,16 @@
   <url>
     <loc>https://prseo7.github.io/jlpt-vocab-master/</loc>
     <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/jlpt-vocab-master/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/jlpt-vocab-master/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/jlpt-vocab-master/"/>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/ko/jlpt-vocab-master/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/jlpt-vocab-master/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/jlpt-vocab-master/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/jlpt-vocab-master/"/>
   </url>
   <url>
     <loc>https://prseo7.github.io/easyvocab/</loc>
@@ -30,10 +40,30 @@
   <url>
     <loc>https://prseo7.github.io/provocab/</loc>
     <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/provocab/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/provocab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/provocab/"/>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/ko/provocab/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/provocab/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/provocab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/provocab/"/>
   </url>
   <url>
     <loc>https://prseo7.github.io/tabata-timer/</loc>
     <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/tabata-timer/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/tabata-timer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/tabata-timer/"/>
+  </url>
+  <url>
+    <loc>https://prseo7.github.io/ko/tabata-timer/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prseo7.github.io/tabata-timer/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://prseo7.github.io/ko/tabata-timer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prseo7.github.io/tabata-timer/"/>
   </url>
   <url>
     <loc>https://prseo7.github.io/privacy-policy/</loc>

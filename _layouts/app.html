@@ -182,7 +182,7 @@
 
     <section aria-labelledby="how-h">
       <div class="container">
-        <h2 id="how-h">{{ L.how }}</h2>
+        <h2 id="how-h">{{ page.how_label | default: L.how }}</h2>
         <ol class="steps">
 {%- for step in page.steps %}
           <li>{{ step }}</li>
@@ -245,7 +245,7 @@
       </nav>
       <p class="other-apps-title">{{ L.other_apps }}</p>
       <ul class="other-apps">
-{%- assign others = site.pages | where: "layout", "app" | where: "lang", "en" | sort: "app_name" %}
+{%- assign others = site.pages | where: "layout", "app" | where: "lang", page.lang | sort: "app_name" %}
 {%- assign alt_urls = "" | split: "" -%}{%- for a in page.alternate -%}{%- assign alt_urls = alt_urls | push: a[1] -%}{%- endfor -%}
 {%- for o in others %}
 {%- unless o.slug == page.slug or alt_urls contains o.url %}

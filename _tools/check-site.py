@@ -17,7 +17,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 SITE = "https://prseo7.github.io"
-APP_PAGES = ["/jlpt-vocab-master/", "/easyvocab/", "/provocab/", "/tabata-timer/", "/ko/easyvocab/"]
+APP_PAGES = ["/jlpt-vocab-master/", "/easyvocab/", "/provocab/", "/tabata-timer/",
+             "/ko/jlpt-vocab-master/", "/ko/easyvocab/", "/ko/provocab/", "/ko/tabata-timer/"]
 BANNED = [r"native speaker", r"원어민", r"\bpreset", r"\$\d", r"￦\d", r"AdMob", r"LevelPlay"]
 
 
