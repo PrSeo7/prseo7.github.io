@@ -1,6 +1,8 @@
 # UI strings for _layouts/app.html and _includes/cookie-banner.html, keyed by page.lang.
 # "%s" is replaced with the app name.
 en:
+  lang_name: English
+  lang_switch_aria: Read this page in English
   home: Home
   apps: Apps
   icon_alt: "%s app icon"
@@ -27,6 +29,8 @@ en:
   accept: Accept
   decline: Decline
 ko:
+  lang_name: 한국어
+  lang_switch_aria: 이 페이지를 한국어로 보기
   home: 홈
   apps: 앱
   icon_alt: "%s 앱 아이콘"

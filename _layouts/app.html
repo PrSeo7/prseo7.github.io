@@ -128,7 +128,16 @@
   <header class="site-bar">
     <div class="container">
       <a href="/" class="brand">PrSeo7</a>
-      <a href="/#products">{{ L.apps }}</a>
+      <nav class="site-nav">
+        <a href="/#products">{{ L.apps }}</a>
+{%- for alt in page.alternate %}
+{%- unless alt[1] == page.url %}
+{%- assign alt_lang = alt[0] %}
+{%- assign AL = site.data.app_labels[alt_lang] %}
+        <a class="lang-switch" href="{{ alt[1] }}" hreflang="{{ alt[0] }}" lang="{{ alt[0] }}" data-lang="{{ alt[0] }}" aria-label="{{ AL.lang_switch_aria }}">{{ AL.lang_name }}</a>
+{%- endunless %}
+{%- endfor %}
+      </nav>
     </div>
   </header>
 
@@ -258,6 +267,14 @@
   </footer>
 
   <script>
+    // Remember an explicit language choice so the homepage's app links honour it
+    // over the browser language (see the matching script in /index.html).
+    document.querySelectorAll('a.lang-switch').forEach(function (link) {
+      link.addEventListener('click', function () {
+        try { localStorage.setItem('prseo7-lang', this.getAttribute('data-lang')); } catch (e) {}
+      });
+    });
+
     // Store-link clicks, sent only after analytics consent (same event as the homepage)
     document.querySelectorAll('a.store-btn').forEach(function (link) {
       link.addEventListener('click', function () {
