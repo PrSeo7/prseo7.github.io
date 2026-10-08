@@ -130,13 +130,19 @@
       <a href="/" class="brand">PrSeo7</a>
       <nav class="site-nav">
         <a href="/#products">{{ L.apps }}</a>
+{%- if page.alternate %}
+        <span class="lang-flags">
 {%- for alt in page.alternate %}
-{%- unless alt[1] == page.url %}
 {%- assign alt_lang = alt[0] %}
 {%- assign AL = site.data.app_labels[alt_lang] %}
-        <a class="lang-switch" href="{{ alt[1] }}" hreflang="{{ alt[0] }}" lang="{{ alt[0] }}" data-lang="{{ alt[0] }}" aria-label="{{ AL.lang_switch_aria }}">{{ AL.lang_name }}</a>
-{%- endunless %}
+{%- if alt[1] == page.url %}
+          <span class="lang-switch is-current" lang="{{ alt[0] }}" title="{{ AL.lang_name }}"><img src="{{ AL.lang_flag }}" alt="{{ AL.lang_name }}" width="24" height="16"></span>
+{%- else %}
+          <a class="lang-switch" href="{{ alt[1] }}" hreflang="{{ alt[0] }}" lang="{{ alt[0] }}" data-lang="{{ alt[0] }}" aria-label="{{ AL.lang_switch_aria }}" title="{{ AL.lang_name }}"><img src="{{ AL.lang_flag }}" alt="" width="24" height="16"></a>
+{%- endif %}
 {%- endfor %}
+        </span>
+{%- endif %}
       </nav>
     </div>
   </header>

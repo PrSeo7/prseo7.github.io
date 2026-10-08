@@ -2,6 +2,7 @@
 # "%s" is replaced with the app name.
 en:
   lang_name: English
+  lang_flag: /images/flags/us.svg
   lang_switch_aria: Read this page in English
   home: Home
   apps: Apps
@@ -30,6 +31,7 @@ en:
   decline: Decline
 ko:
   lang_name: 한국어
+  lang_flag: /images/flags/kr.svg
   lang_switch_aria: 이 페이지를 한국어로 보기
   home: 홈
   apps: 앱
